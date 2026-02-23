@@ -1,0 +1,166 @@
+meta:
+  source: "FPR Voice Protection Playbook"
+  version: "2026-01-16"
+  applies_to: all_projects
+
+north_star:
+  priority: "Protect voice even if it's longer"
+  audience_posture: "Public-accessible first, strategic and decision-maker-ready"
+  voice_attributes:
+    - "Authoritative but accessible"
+    - "Visionary, but anchored in evidence"
+    - "Asset-based, not deficit-based"
+    - "Multisector + systems-oriented"
+    - "Propositive"
+    - "Built for long-term transformation"
+
+paragraph_architecture:
+  canonical_arc:
+    - context_diagnosis
+    - challenges_gaps_fragmentation
+    - assets_opportunities
+    - proposal_model
+    - expected_results_transformation
+  editorial_rule: "Preserve all beats, especially assets/opportunities and proposal/model"
+
+point_of_view:
+  default: "Third-person institutional"
+  we_usage: "Only when it clearly strengthens institutional stance"
+  tense_current: "Present for current conditions"
+  tense_proposals: "Present-intent or future: will, is envisioned, will enable"
+
+protected_lexicon:
+  core_manifesto:
+    - "framework for transformation"
+    - "living roadmap"
+    - "thriving future"
+    - "rooted in sustainability, resilience and shared prosperity"
+    - "shared stewardship"
+    - "inclusive community engagement"
+    - "collective responsibility"
+    - "asset-based development"
+    - "sustainable destination management"
+    - "innovation through new ways of connecting, collaborating, solving problems"
+  governance_language:
+    - "permanent, independent, multisectoral, decision-making body"
+    - "coordinated independent regional governance system"
+    - "enduring institutional anchor"
+    - "institutional backbone"
+    - "braided funding"
+    - "community roundtables / advisory committees"
+  visitor_economy_framing:
+    - "visitor economy becomes a strategic lever"
+    - "tourism enhances — not burdens — local communities"
+    - "economic reinvestment… youth empowerment… heritage preservation"
+    - "attractions not as commodities… foundation of a sustainable economy"
+    - "reintegrate economic value locally / reinvestment"
+  mobility_tech_language:
+    - "integrated, technologically advanced, multimodal"
+    - "Mobility as a Service (MaaS)… digital backbone"
+    - "links land, sea, and air"
+    - "integrate… into a single app for trip planning, booking, and payment"
+  human_capital_framing:
+    - "treat human capital as a form of public infrastructure"
+    - "people at the heart of development… shared prosperity"
+
+terminology_discipline:
+  attractions_vs_attractors:
+    attractions: "Concrete assets/places/experiences people visit (sites, events, activities, natural/cultural assets)"
+    attractors: "Cultural/natural/creative drivers or anchor elements emphasizing drawing power and shaping visitor movement/strategy"
+    rule: "Preserve both terms. Define 'attractors' on first use with a plain-language appositive, then use consistently."
+
+equity_rules:
+  do:
+    - "Attribute disparities to structural challenges, historic investment patterns, unequal access"
+    - "Use people-centered terms: residents, communities, families, youth, workforce"
+  dont:
+    - "Stigmatizing labels (e.g., 'the poor')"
+    - "Any framing where communities are the problem"
+
+stakeholder_formula:
+  standard: "municipal governments, nonprofit organizations, public agencies, private sector actors, community stakeholders, and residents"
+  rule: "Use this exact formula when listing stakeholder groups"
+
+safe_edits:
+  - "Remove true redundancy (same idea repeated without new function)"
+  - "Replace unclear pronouns with explicit nouns"
+  - "Reduce hedge-stacking (may, might, could potentially)"
+  - "Break very long sentences only if rhythm and vision→evidence→action arc preserved"
+  - "Convert dense lists to structured bullets when it improves public readability"
+
+reject_edits:
+  - "Swapping signature institutional language for generic corporate synonyms"
+  - "Deleting values layer (stewardship, shared prosperity, community benefit)"
+  - "Removing bridge logic that carries the paragraph architecture"
+  - "Over-simplifying systems language into linear program talk"
+
+modality:
+  rule: "No certainty upgrades. Preserve original modality exactly."
+  preserve_modals:
+    - "can"
+    - "may"
+    - "might"
+    - "aims to"
+    - "seeks to"
+    - "helps"
+    - "is intended to"
+  forbidden_upgrades:
+    - "will ensure"
+    - "guarantees"
+    - "will achieve"
+
+em_dash_rules:
+  use_when:
+    - "Rhetorical pivot or contrast that should pop"
+    - "Intentional cadence break for spoken/visionary effect"
+    - "Compressed emphasis where aside must be foregrounded"
+    - "Avoiding awkward commas or ambiguity"
+  avoid_when:
+    - "Routine clarifiers (use parentheses)"
+    - "Simple appositives (use commas)"
+    - "Lists (use colon or split)"
+  clustering_rule: "If multiple em dashes appear in proximity, replace lowest-value ones with sentence splits, colons, parentheses, or commas"
+
+readability_rules:
+  - "Reduce jargon where possible, but do not oversimplify concepts"
+  - "Add light clarifiers on first use of specialized terms (one clause, not a detour)"
+  - "Sentence density: avoid semicolon chains in public-facing narrative sections (max 1 semicolon per sentence)"
+  - "Maintain intentional motifs, but reduce accidental repetition by rotating phrasing"
+
+citations:
+  style: "Numbered footnotes for in-text citations; APA reference style in footnote; no full reference list"
+  goal: "Decision-maker credibility + readability (policy institute style)"
+
+editing_passes:
+  pass_1: "Voice + structure: enforce paragraph architecture, equity framing, stakeholder formula"
+  pass_2: "Line edit: clean clarity, tighten safely, preserve cadence and authority"
+  pass_3: "Mechanics: grammar, punctuation, typos only"
+
+master_editor_lens:
+  description: "Second micro-pass for elegance and cadence — only where it removes friction without changing meaning, certainty, or voice"
+  allowed:
+    - "Remove micro-repetition (same verb/phrase twice in a sentence/paragraph)"
+    - "Swap a phrase for a cleaner equivalent that preserves tone and claim strength"
+    - "Replace slightly clunky time/sequence constructions with plain, vivid phrasing"
+    - "Tighten transitions only when they improve flow and don't delete narrative beats"
+  not_allowed:
+    - "Certainty upgrades"
+    - "Recomposition unless significant-problem criteria are met"
+    - "Tone flattening or generic corporate phrasing"
+    - "Shifting scope, actors, or causal claims"
+  rule: "If the sentence is already clean, the Master Editor Lens does nothing"
+
+preserve_first:
+  default: "Preserve original phrasing and cadence"
+  recompose_only_if:
+    - "Meaning risk: ambiguity or unclear logic"
+    - "Grammar correctness: sentence is ungrammatical"
+    - "Reader friction: public reader would need to re-read"
+    - "Consistency risk: terminology conflicts with locked rules"
+    - "Excessive density: sentence too long for clarity"
+  escalation_ladder:
+    1: "Fix punctuation and small connector words"
+    2: "Fix parallel structure without changing wording"
+    3: "Split into two sentences only if necessary"
+    4: "Recompose keeping 70-80% of original wording"
+  output_rule: "Show closest-to-original first; recomposed version as Option B only if significant-problem criterion met"

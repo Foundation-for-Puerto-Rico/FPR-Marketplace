@@ -1,0 +1,81 @@
+meta:
+  project: ERSV
+  source: "FPR Voice Protection Playbook — ERSV-specific sections"
+  note: "These terms are untouchable. Do not suggest replacements, simplifications, or deletions of these phrases."
+
+terms:
+  core_manifesto:
+    description: "Voice DNA — treat as canonical institutional identity"
+    entries:
+      - "framework for transformation"
+      - "living roadmap"
+      - "thriving future"
+      - "rooted in sustainability, resilience and shared prosperity"
+      - "shared stewardship"
+      - "inclusive community engagement"
+      - "collective responsibility"
+      - "asset-based development"
+      - "sustainable destination management"
+      - "innovation through new ways of connecting, collaborating, solving problems"
+
+  governance_language:
+    description: "Governance and institution-building language — do not water down"
+    entries:
+      - "permanent, independent, multisectoral, decision-making body"
+      - "coordinated independent regional governance system"
+      - "endure beyond political cycles"
+      - "enduring institutional anchor"
+      - "institutional backbone"
+      - "braided funding"
+      - "community roundtables"
+      - "advisory committees"
+
+  visitor_economy_framing:
+    description: "Visitor economy — keep the moral + economic logic together"
+    entries:
+      - "visitor economy becomes a strategic lever"
+      - "tourism enhances — not burdens — local communities"
+      - "economic reinvestment"
+      - "youth empowerment"
+      - "heritage preservation"
+      - "attractions not as commodities"
+      - "foundation of a sustainable economy"
+      - "reintegrate economic value locally"
+      - "Visitor Economy"
+
+  mobility_tech_language:
+    description: "Mobility + tech — do not let it become just an app"
+    entries:
+      - "integrated, technologically advanced, multimodal"
+      - "Mobility as a Service (MaaS)"
+      - "digital backbone"
+      - "links land, sea, and air"
+      - "Mobility-as-a-Service"
+
+  human_capital_framing:
+    description: "Human capital — protect the people-centered voice"
+    entries:
+      - "treat human capital as a form of public infrastructure"
+      - "people at the heart of development"
+      - "shared prosperity"
+
+  terminology_discipline:
+    description: "Terminology pairs — both terms must be preserved and used consistently"
+    entries:
+      - term: "Attractions"
+        meaning: "Concrete assets/places/experiences people visit (sites, events, activities, natural/cultural assets)"
+        do_not_replace_with: ["attractions (lowercase)", "tourist sites", "sites"]
+      - term: "Attractors"
+        meaning: "Cultural/natural/creative drivers or anchor elements emphasizing drawing power and shaping visitor movement/strategy"
+        do_not_replace_with: ["attractions", "sites", "places"]
+        note: "Define on first use with a plain-language appositive; then use consistently"
+
+  eastern_region_proper_nouns:
+    description: "Official proper nouns that must be capitalized and spelled exactly"
+    entries:
+      - "Eastern Region"
+      - "Eastern Region Strategic Vision"
+      - "Eastern Region Economic Development Fund (EREDF)"
+      - "El Yunque National Forest"
+      - "Tren Urbano"
+      - "Tourism Satellite Account"

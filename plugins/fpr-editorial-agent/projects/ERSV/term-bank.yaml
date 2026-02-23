@@ -1,0 +1,509 @@
+meta:
+  source: "FPR-Grammarly-StyleGuide-2026_01_15.xlsx"
+  version: "2026-01-15"
+  project: ERSV
+
+entries:
+  - id: ERSV-001
+    original: "ATI"
+    replacement: "PRITA"
+    rule: "For English versions, do not use ATI; use PRITA (Puerto Rico Integrated Transportation Authority)"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "headings", "tables", "footnotes"]
+
+  - id: ERSV-002
+    original: "Advanced Air Mobility"
+    replacement: "Advanced Air Mobility (AAM)"
+    rule: "On first reference, include the acronym (AAM) if used later"
+    case_sensitive: true
+    context_aware: true
+    applies_in: ["prose", "headings"]
+
+  - id: ERSV-003
+    original: "Asset based development"
+    replacement: "asset-based development"
+    rule: "Hyphenate asset-based when used adjectivally"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-004
+    original: "Bayamon"
+    replacement: "Bayamón"
+    rule: "Use correct Spanish accent in Puerto Rico place names"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "headings", "tables", "footnotes"]
+
+  - id: ERSV-005
+    original: "Ceiba - San Juan"
+    replacement: "Ceiba–San Juan"
+    rule: "Standardize route pair formatting to en dash"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-006
+    original: "Ceiba-San Juan"
+    replacement: "Ceiba–San Juan"
+    rule: "Standardize route pair formatting to en dash"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-007
+    original: "DDEC"
+    replacement: "PRDEDC"
+    rule: "For English versions, use Puerto Rico Department of Economic Development and Commerce acronym PRDEDC"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "headings", "tables", "footnotes"]
+
+  - id: ERSV-008
+    original: "DNER"
+    replacement: "PRDNER"
+    rule: "For English versions, use PRDNER for Puerto Rico Department of Natural and Environmental Resources (instead of DRNA/DNER) per house style"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "headings", "tables", "footnotes"]
+
+  - id: ERSV-009
+    original: "DRD"
+    replacement: "PRDSR"
+    rule: "For English versions, use Puerto Rico Department of Sports and Recreation acronym PRDSR"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "headings", "tables", "footnotes"]
+
+  - id: ERSV-010
+    original: "DRNA"
+    replacement: "PRDNER"
+    rule: "For English versions, use Puerto Rico Department of Natural and Environmental Resources acronym PRDNER"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "headings", "tables", "footnotes"]
+
+  - id: ERSV-011
+    original: "DTOP"
+    replacement: "PRDTPW"
+    rule: "For English versions, use Puerto Rico Department of Transportation and Public Works acronym PRDTPW"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "headings", "tables", "footnotes"]
+
+  - id: ERSV-012
+    original: "Demand responsive"
+    replacement: "Demand-responsive"
+    rule: "Hyphenate demand-responsive when used as an adjective"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-013
+    original: "Demand-Responsive Transit"
+    replacement: "Demand-Responsive Transit (DRT)"
+    rule: "On first reference, include the acronym (DRT) if used later"
+    case_sensitive: true
+    context_aware: true
+    applies_in: ["prose", "headings"]
+
+  - id: ERSV-014
+    original: "Destination Management Organization"
+    replacement: "Destination Marketing Organization"
+    rule: "Use Destination Marketing Organization when referring to the concept in general"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-015
+    original: "East Region"
+    replacement: "Eastern Region"
+    rule: "Do not use East Region; use the capitalized term Eastern Region"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "headings", "tables", "footnotes"]
+
+  - id: ERSV-016
+    original: "Eastern Region Economic Development Fund"
+    replacement: "Eastern Region Economic Development Fund (EREDF)"
+    rule: "On first reference, include the acronym (EREDF) for consistency; use EREDF thereafter"
+    case_sensitive: true
+    context_aware: true
+    applies_in: ["prose", "headings"]
+
+  - id: ERSV-017
+    original: "Eastern Region Strategic vision"
+    replacement: "Eastern Region Strategic Vision"
+    rule: "Standardize capitalization of the official framework name"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-018
+    original: "Eastern Region strategic vision"
+    replacement: "Eastern Region Strategic Vision"
+    rule: "Standardize capitalization of the official framework name"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-019
+    original: "Eastern Region2 Strategic Vision"
+    replacement: "Eastern Region Strategic Vision"
+    rule: "Remove stray footnote marker in heading/phrase"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings"]
+
+  - id: ERSV-020
+    original: "Eastern region"
+    replacement: "Eastern Region"
+    rule: "Capitalize the term Eastern Region when referring to the 15-municipality Eastern Region"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-021
+    original: "El Yunque forest"
+    replacement: "El Yunque National Forest"
+    rule: "Use full proper name El Yunque National Forest in English"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-022
+    original: "El Yunque rainforest"
+    replacement: "El Yunque National Forest"
+    rule: "Use full proper name El Yunque National Forest in English (unless intentionally contrasting with broader rainforest)"
+    case_sensitive: false
+    context_aware: true
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-023
+    original: "Ibid."
+    replacement: ""
+    rule: "Never use Ibid.; repeat the full citation so it stands on its own"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["footnotes"]
+
+  - id: ERSV-024
+    original: "In transit passengers"
+    replacement: "In Transit passengers"
+    rule: "Capitalize when referring to the cruise passenger segment/category (Homeport vs In Transit)"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-025
+    original: "Jose Aponte de la Torre"
+    replacement: "José Aponte de la Torre"
+    rule: "Use correct accent and capitalization for proper name"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings", "tables", "footnotes"]
+
+  - id: ERSV-026
+    original: "Law (Ley)"
+    replacement: "Act"
+    rule: "When referring to a Puerto Rico Ley, translate as Act, not Law"
+    case_sensitive: false
+    context_aware: true
+    applies_in: ["prose", "headings", "tables", "footnotes"]
+
+  - id: ERSV-027
+    original: "Ley"
+    replacement: "Act"
+    rule: "In English, translate Ley as Act, not Law"
+    case_sensitive: true
+    context_aware: true
+    applies_in: ["prose", "headings", "tables", "footnotes"]
+
+  - id: ERSV-028
+    original: "Loiza"
+    replacement: "Loíza"
+    rule: "Use correct Spanish accent in Puerto Rico place names"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "headings", "tables", "footnotes"]
+
+  - id: ERSV-029
+    original: "MaaS platform"
+    replacement: "Mobility-as-a-Service (MaaS) platform"
+    rule: "On first reference, expand Mobility-as-a-Service and include (MaaS). Use MaaS thereafter"
+    case_sensitive: true
+    context_aware: true
+    applies_in: ["prose", "headings"]
+
+  - id: ERSV-030
+    original: "Metrics & Monitoring"
+    replacement: "Metrics and Monitoring"
+    rule: "Choose one convention for headings; this sets 'and' instead of '&'"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["headings"]
+
+  - id: ERSV-031
+    original: "Mobility Hub"
+    replacement: "mobility hub"
+    rule: "Use lowercase mobility hub unless part of a proper noun"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "tables"]
+
+  - id: ERSV-032
+    original: "Mobility as a Service"
+    replacement: "Mobility-as-a-Service"
+    rule: "Use the hyphenated form Mobility-as-a-Service; define MaaS on first use if you plan to use the acronym"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-033
+    original: "Mobility hub"
+    replacement: "mobility hub"
+    rule: "Use lowercase mobility hub unless part of a proper noun"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "tables"]
+
+  - id: ERSV-034
+    original: "Mobility-as-a-Service platform"
+    replacement: "Mobility-as-a-Service (MaaS) platform"
+    rule: "On first reference, include (MaaS) if you plan to use the acronym"
+    case_sensitive: false
+    context_aware: true
+    applies_in: ["prose", "headings"]
+
+  - id: ERSV-035
+    original: "On demand"
+    replacement: "On-demand"
+    rule: "Hyphenate on-demand when used as an adjective"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-036
+    original: "Op. cit."
+    replacement: ""
+    rule: "Do not use Op. cit.; repeat the full citation so it stands on its own"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["footnotes"]
+
+  - id: ERSV-037
+    original: "Palmer;Rio Grande"
+    replacement: "Palmer, Río Grande"
+    rule: "Use correct Spanish accent in Puerto Rico place names"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-038
+    original: "Para la Naturalize"
+    replacement: "Para la Naturaleza"
+    rule: "Use the organization's official name and spelling"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings", "tables", "footnotes"]
+
+  - id: ERSV-039
+    original: "Para la naturaleza"
+    replacement: "Para la Naturaleza"
+    rule: "Standardize capitalization for the proper name"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "headings", "tables", "footnotes"]
+
+  - id: ERSV-040
+    original: "Public private partnerships"
+    replacement: "public-private partnerships"
+    rule: "Hyphenate public-private when used as an adjective"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-041
+    original: "Real Time"
+    replacement: "Real-Time"
+    rule: "Hyphenate Real-Time when used in headings"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["headings"]
+
+  - id: ERSV-042
+    original: "Region"
+    replacement: "the region"
+    rule: "Do not use Region alone to refer to the Eastern Region; use the region (lowercase) where substitution is acceptable"
+    case_sensitive: true
+    context_aware: true
+    applies_in: ["prose"]
+
+  - id: ERSV-043
+    original: "Regional Data Commons"
+    replacement: "Regional Data Observatory"
+    rule: "Use Regional Data Observatory instead of Regional Data Commons"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-044
+    original: "Retrieved from"
+    replacement: ""
+    rule: "Do not use Retrieved from unless a retrieval date is essential (e.g., dynamic sources like wikis)"
+    case_sensitive: false
+    context_aware: true
+    applies_in: ["footnotes"]
+
+  - id: ERSV-045
+    original: "Ride hailing"
+    replacement: "Ride-hailing"
+    rule: "Hyphenate ride-hailing when used as a compound modifier"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-046
+    original: "Strategic vision"
+    replacement: "Strategic Vision"
+    rule: "Capitalize when referring to the Eastern Region Strategic Vision as a proper noun (use judgment)"
+    case_sensitive: true
+    context_aware: true
+    applies_in: ["prose", "headings"]
+
+  - id: ERSV-047
+    original: "Tourism satellite account"
+    replacement: "Tourism Satellite Account"
+    rule: "Capitalize as the formal name of the metric/program (TSA)"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-048
+    original: "Transit-Oriented Development"
+    replacement: "Transit-Oriented Development (TOD)"
+    rule: "On first reference, include the acronym (TOD) if used later"
+    case_sensitive: true
+    context_aware: true
+    applies_in: ["prose", "headings"]
+
+  - id: ERSV-049
+    original: "Transportation & Mobility"
+    replacement: "Transportation and Mobility"
+    rule: "Standardize naming of the pillar; choose one convention (this sets 'and')"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["headings"]
+
+  - id: ERSV-050
+    original: "Transportation and Mobility1"
+    replacement: "Transportation and Mobility"
+    rule: "Remove stray footnote marker in heading"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["headings"]
+
+  - id: ERSV-051
+    original: "Tren urbano"
+    replacement: "Tren Urbano"
+    rule: "Use correct capitalization for Tren Urbano"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "headings", "tables", "footnotes"]
+
+  - id: ERSV-052
+    original: "US Forest Service"
+    replacement: "U.S. Forest Service"
+    rule: "Use the standard punctuation for the agency name"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings", "tables", "footnotes"]
+
+  - id: ERSV-053
+    original: "VE"
+    replacement: "Visitor Economy (VE)"
+    rule: "Define Visitor Economy and include (VE) before using VE as an abbreviation"
+    case_sensitive: true
+    context_aware: true
+    applies_in: ["prose", "headings"]
+
+  - id: ERSV-054
+    original: "Vertiports"
+    replacement: "vertiports"
+    rule: "Use lowercase vertiports unless part of a proper noun"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "tables"]
+
+  - id: ERSV-055
+    original: "Visitor economy"
+    replacement: "Visitor Economy"
+    rule: "Standardize to Visitor Economy when used as a defined concept"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-056
+    original: "World Travel and Tourism Council"
+    replacement: "World Travel & Tourism Council"
+    rule: "Use the official organization name with ampersand"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings", "tables", "footnotes"]
+
+  - id: ERSV-057
+    original: "Yunque"
+    replacement: "El Yunque"
+    rule: "When referring to the rainforest/forest, use El Yunque as the proper name"
+    case_sensitive: false
+    context_aware: true
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-058
+    original: "asset based"
+    replacement: "asset-based"
+    rule: "Hyphenate asset-based when used as a modifier"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-059
+    original: "asset based development"
+    replacement: "asset-based development"
+    rule: "Hyphenate asset-based when used adjectivally"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-060
+    original: "bio bays"
+    replacement: "bioluminescent bays"
+    rule: "Use the more formal term bioluminescent bays in concept papers"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-061
+    original: "Short term rental"
+    replacement: "Short-term rental"
+    rule: "Hyphenate as short-term when used as an adjective (e.g., short-term rental)"
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["prose", "headings", "tables"]
+
+  - id: ERSV-062
+    original: "Eastern Region Strategic Vision"
+    replacement: "Eastern Region Strategic Vision"
+    rule: "Remove double space; keep official name capitalized"
+    case_sensitive: true
+    context_aware: false
+    applies_in: ["prose", "headings"]
+
+  - id: ERSV-063
+    original: "and"
+    replacement: "&"
+    rule: "In APA references: use '&' between two authors; use commas between 3-21 names with '&' before the last name. Apply only in reference entries."
+    case_sensitive: false
+    context_aware: false
+    applies_in: ["footnotes"]

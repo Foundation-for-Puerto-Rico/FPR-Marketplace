@@ -1,0 +1,77 @@
+meta:
+  source: "The Economist Style Guide, 12th edition"
+  note: "Principios de claridad universal. Excluye convenciones británicas de spelling y estilo periodístico."
+  applies_to: all_projects
+
+clarity_principles:
+  orwell_rules:
+    - id: ECO-001
+      rule: "Never use a metaphor, simile or figure of speech you are used to seeing in print"
+    - id: ECO-002
+      rule: "Never use a long word where a short one will do"
+    - id: ECO-003
+      rule: "If it is possible to cut a word, always cut it out"
+    - id: ECO-004
+      rule: "Never use the passive where you can use the active"
+    - id: ECO-005
+      rule: "Never use jargon if you can think of an everyday equivalent"
+    - id: ECO-006
+      rule: "Break any rule sooner than say anything outright barbarous"
+
+  preferred_substitutions:
+    - original: "permit"
+      preferred: "let"
+    - original: "persons"
+      preferred: "people"
+    - original: "purchase"
+      preferred: "buy"
+    - original: "demonstrate"
+      preferred: "show"
+    - original: "utilise"
+      preferred: "use"
+    - original: "commence"
+      preferred: "begin"
+    - original: "endeavour"
+      preferred: "try"
+    - original: "in order to"
+      preferred: "to"
+    - original: "at this point in time"
+      preferred: "now"
+    - original: "due to the fact that"
+      preferred: "because"
+    - original: "in the event that"
+      preferred: "if"
+
+  sentence_principles:
+    - "No folds, no vaguenesses, no parenthetical interruptions that break the view as a whole"
+    - "Long paragraphs confuse. Paragraph is a unit of thought, not length"
+    - "One-sentence paragraphs used only occasionally"
+
+  voice_principles:
+    - "Use language of everyday speech, not spokesmen, lawyers, or bureaucrats"
+    - "Pomposity and long-windedness obscure meaning"
+    - "Do not be stuffy"
+    - "Clear thinking is the key to clear writing"
+
+abbreviations:
+  rule: "Write full form on first appearance unless abbreviation is universally known"
+  universal_known:
+    - AIDS
+    - BBC
+    - CIA
+    - EU
+    - FBI
+    - HIV
+    - IMF
+    - NASA
+    - NATO
+    - NGO
+    - OECD
+    - UNESCO
+  after_first_mention: "Prefer descriptive reference (the agency, the programme) over repeating acronym"
+  no_need_for_initials: "If organisation not referred to again, do not give initials"
+
+accents:
+  rule: "Use accents on words when they make a crucial difference to pronunciation"
+  always_accent_spanish_names: true
+  note: "Puerto Rico place names must carry correct Spanish accents (Bayamón, Loíza, Río Grande)"

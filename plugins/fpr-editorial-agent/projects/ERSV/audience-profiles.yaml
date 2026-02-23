@@ -1,0 +1,21 @@
+meta:
+  project: ERSV
+  source: "FPR Voice Protection Playbook + Master Editing Prompt v5"
+
+profiles:
+  - id: "ERSV-AUD-001"
+    name: "Public report / donor-facing"
+    description: "Hybrid document: public report + strategy + donor/stakeholder-facing intended to support collaborative partnerships and inspire"
+    tone: "Authoritative but accessible"
+    jargon_tolerance: low
+    mode_default: deep
+    audience_posture: "Public-accessible first (clear, engaging, non-technical), while maintaining institutional authority and strategic rigor"
+    language: "en"
+
+  - id: "ERSV-AUD-002"
+    name: "Internal strategic"
+    description: "Internal FPR team and partner organizations"
+    tone: "Professional, direct"
+    jargon_tolerance: medium
+    mode_default: light
+    language: "en"

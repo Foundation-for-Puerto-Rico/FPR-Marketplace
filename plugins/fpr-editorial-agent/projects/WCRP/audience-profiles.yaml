@@ -1,0 +1,54 @@
+meta:
+  project: WCRP
+  source: "CLAUDE.md specification + WCRP program documents"
+
+profiles:
+  - id: "WCRP-AUD-001"
+    name: "PRDOH / federal"
+    description: "Entregables formales al Departamento de Vivienda de Puerto Rico (PRDOH) y HUD. Documentación oficial del programa que debe demostrar alineación con requisitos CDBG-DR."
+    tone: "Formal institucional, demuestra alineación con requisitos del programa"
+    jargon_tolerance: high
+    federal_terms_protected: true
+    language: "en"
+    mode_default: light
+    notes:
+      - "Términos federales (beneficiario elegible, actividad elegible, período de performance) son INTOCABLES"
+      - "Documentación debe cumplir con requisitos de PRDOH — no simplificar terminología de compliance"
+      - "Incluye: informes de progreso, entregables oficiales, enmiendas al plan de acción"
+
+  - id: "WCRP-AUD-002"
+    name: "Informe comunitario"
+    description: "Documentos dirigidos a residentes y líderes comunitarios de las 65 comunidades del programa. Claridad sobre jargon técnico. Incluye Planes de Resiliencia Comunitaria (CRP) y sus secciones de condiciones existentes."
+    tone: "Claro, accesible, no técnico"
+    jargon_tolerance: low
+    federal_terms_protected: true
+    language: "es"
+    mode_default: deep
+    notes:
+      - "Preservar voz comunitaria y participativa"
+      - "Definir términos técnicos en primera referencia con apositivos claros"
+      - "Los nombres de comunidades deben tener acentos correctos en todo momento"
+      - "Incluye: planes comunitarios, resúmenes ejecutivos, materiales de reunión"
+
+  - id: "WCRP-AUD-003"
+    name: "Subrecipientes"
+    description: "Organizaciones que implementan el programa (P.E.C.E.S., IBTS, Vitrina Solidaria, municipios, universidades, etc.). Orientado a implementación y cumplimiento de entregables."
+    tone: "Profesional, directo, orientado a implementación"
+    jargon_tolerance: medium
+    federal_terms_protected: true
+    language: "es"
+    mode_default: light
+    notes:
+      - "Terminología del programa debe usarse consistentemente (entregables, fases, comités)"
+      - "Incluye: guías de implementación, instrucciones de entregables, materiales de capacitación"
+
+  - id: "WCRP-AUD-004"
+    name: "Interno FPR"
+    description: "Documentos internos del equipo de Foundation for Puerto Rico que gestiona el programa WCRP."
+    tone: "Directo, conciso"
+    jargon_tolerance: medium
+    language: "es"
+    mode_default: light
+    notes:
+      - "Incluye: notas operativas, comunicaciones internas, reportes de progreso internos"
+      - "El léxico técnico del programa se asume conocido — no requiere definición en primera referencia"

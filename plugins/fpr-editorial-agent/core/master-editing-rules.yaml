@@ -1,0 +1,115 @@
+meta:
+  source: "Master Editing Prompt v5 + Editorial Pack for Use with ChatGPT"
+  version: "2026-01-21"
+  applies_to: all_projects
+
+non_negotiables:
+  - id: NNQ-001
+    rule: "NO CERTAINTY UPGRADES"
+    description: >
+      Do not increase degree of certainty. Preserve author's original modality
+      (can, may, might, aims to, seeks to, helps, is intended to, etc.).
+      Do NOT turn cautious language into guaranteed outcomes.
+      If readability requires changes, keep the same modals and level of caution.
+  - id: NNQ-002
+    rule: "PRESERVE-FIRST LINE EDITING"
+    description: >
+      Default to minimal close-to-original edits. Recompose only for significant
+      problems (meaning ambiguity, grammatical error, major public-reader friction,
+      terminology inconsistency, or clarity break due to density).
+      Escalation ladder: punctuation/connector tweaks → parallelism fix →
+      split sentence → recompose (last resort, 70-80% original wording).
+  - id: NNQ-003
+    rule: "PROTECT FPR VOICE"
+    description: >
+      If change makes text shorter/cleaner but flattens FPR voice, reject it.
+      After preserve-first edits, apply Master Editor Lens (second micro-pass)
+      to remove friction without changing meaning, certainty, or voice.
+  - id: NNQ-004
+    rule: "EQUITY + FRAMING"
+    description: >
+      Asset-based framing. Attribute disparities to structural conditions.
+      Do not stigmatize communities or imply communities are the problem.
+  - id: NNQ-005
+    rule: "SYSTEMS + GOVERNANCE INTEGRITY"
+    description: >
+      Maintain strong systems framing (regional coordination, multisector
+      collaboration, durable models/platforms — not one-off programs).
+      Do not remove values framing (stewardship, shared prosperity, community benefit).
+
+modes:
+  light:
+    description: "Fix clarity, flow, obvious wordiness. Keep structure and length roughly similar."
+    applies:
+      - deterministic_pass
+      - heuristic_high_confidence_only
+  deep:
+    description: >
+      Reorganize within section for narrative logic, tighten redundancies,
+      strengthen transitions/topic sentences, improve accessibility —
+      without flattening FPR voice and without certainty upgrades.
+    applies:
+      - deterministic_pass
+      - heuristic_all
+      - structure_suggestions
+  audit:
+    description: "Diagnose only. No modifications to document. Output flags and changelog only."
+    applies:
+      - deterministic_pass
+      - heuristic_all
+    output: "flags_and_changelog_only"
+
+output_format:
+  revised_text: true
+  change_log: "Short list of meaningful tradeoffs only"
+  global_flags: "Flag recurring issues but do not apply global changes unless asked"
+
+confidence_thresholds:
+  high_confidence_track_change: 0.60
+  low_confidence_comment: 0.60
+  ignore_below: 0.60
+
+safe_to_tighten:
+  - "True redundancy with no new meaning"
+  - "Unclear pronouns → replace with specific nouns"
+  - "Overly academic clutter without flattening voice"
+  - "Transitions, topic sentences, flow for public readability"
+
+reject_always:
+  - "Any edit that changes meaning, scope, or degree of certainty"
+  - "Edits that genericize signature language into bland corporate prose"
+  - "Edits that remove values framing or weaken governance/systems integrity"
+
+structural_logic:
+  preserve: "context/diagnosis → challenges/gaps → assets/opportunities → proposal/model → expected impact/transformation"
+  rule: "Do not delete the 'assets/opportunity' or 'proposal/model' beat simply to shorten the text"
+
+readability:
+  jargon: "Reduce where possible; do not oversimplify concepts"
+  first_use: "Add light clarifiers on first use of specialized terms (one clause, not a detour)"
+  semicolons: "Max 1 per sentence in narrative sections"
+  repetition: "Reduce accidental repetition by rotating phrasing — WITHOUT flattening voice or changing meaning"
+
+punctuation:
+  em_dash:
+    rule: "Allowed but must earn their place. Use only when they add clear rhetorical value."
+    allowed_uses:
+      - "Pivot/contrast that should pop"
+      - "Intentional cadence break"
+      - "Compressed emphasis"
+      - "To avoid ambiguity or awkward commas"
+    not_allowed:
+      - "Routine clarifiers (use parentheses)"
+      - "Simple appositives (use commas)"
+    clustering_rule: "After editing each chunk, if em dashes cluster, replace lowest-value ones with splits/colons/parentheses/commas"
+  hyphens: "Only for true compounds (e.g., post-COVID, place-based)"
+
+chunking:
+  chunk_size: "600-1000 words (400-800 for lists/figures/definitions)"
+  chunk_by: "One subsection or clean stop at a subheading"
+  session_size: "6-10 chunks per chat session"
+  figure_rule: "Include lead-in sentence + figure text + paragraph right after"
+
+stakeholder_formula:
+  standard: "municipal governments, nonprofit organizations, public agencies, private sector actors, community stakeholders, and residents"
+  rule: "Use this exact formula when listing stakeholder groups"

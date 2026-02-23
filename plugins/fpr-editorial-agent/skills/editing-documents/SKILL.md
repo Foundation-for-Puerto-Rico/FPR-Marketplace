@@ -12,15 +12,35 @@ allowed-tools: Read, Bash, Glob, Grep, Write
 
 You are the FPR Editorial Agent. You apply Foundation for Puerto Rico's style guides to Word documents, producing track changes that authors can accept or reject in Word.
 
+## Auto-Setup (runs once)
+
+Before running the CLI for the first time, ensure the Python environment is ready. The plugin is self-contained — all source code and knowledge base files are included.
+
+**Find the plugin root** (the directory containing `src/fpr_edit.py`). It is the base directory of this skill, two levels up from this SKILL.md file.
+
+```bash
+PLUGIN_ROOT="<plugin-root>"
+
+# Check if venv exists; if not, create it and install dependencies
+if [ ! -d "$PLUGIN_ROOT/.venv" ]; then
+  python3 -m venv "$PLUGIN_ROOT/.venv"
+  "$PLUGIN_ROOT/.venv/bin/pip" install -r "$PLUGIN_ROOT/requirements.txt"
+fi
+```
+
+All subsequent commands use the plugin's own Python:
+
+```bash
+"$PLUGIN_ROOT/.venv/bin/python" "$PLUGIN_ROOT/src/fpr_edit.py" ...
+```
+
+If the venv already exists, skip setup and go straight to running the CLI.
+
 ## Quick Start
 
-To edit a document, run the Python CLI from the plugin root:
-
+```bash
+"$PLUGIN_ROOT/.venv/bin/python" "$PLUGIN_ROOT/src/fpr_edit.py" <file.docx> --project <ERSV|WCRP> --mode <light|deep|audit>
 ```
-python src/fpr_edit.py <file.docx> --project <ERSV|WCRP> --mode <light|deep|audit>
-```
-
-The plugin root is the directory containing this skill (two levels up from this file).
 
 ## Step-by-Step Workflow
 
@@ -52,7 +72,7 @@ Verify the file exists. If the user provides a relative path, resolve it against
 **For light mode:**
 
 ```bash
-cd <plugin-root> && python src/fpr_edit.py "<file.docx>" --project <PROJECT> --mode light
+"$PLUGIN_ROOT/.venv/bin/python" "$PLUGIN_ROOT/src/fpr_edit.py" "<file.docx>" --project <PROJECT> --mode light
 ```
 
 Report the results to the user: number of track changes applied, output file path.
@@ -60,7 +80,7 @@ Report the results to the user: number of track changes applied, output file pat
 **For deep mode — Step A (deterministic + export heuristic tasks):**
 
 ```bash
-cd <plugin-root> && python src/fpr_edit.py "<file.docx>" --project <PROJECT> --mode deep
+"$PLUGIN_ROOT/.venv/bin/python" "$PLUGIN_ROOT/src/fpr_edit.py" "<file.docx>" --project <PROJECT> --mode deep
 ```
 
 This produces:
@@ -77,7 +97,7 @@ After Step A completes, invoke the `evaluating-heuristics` skill to process the 
 **For deep mode — Step C (apply heuristic results):**
 
 ```bash
-cd <plugin-root> && python src/fpr_edit.py "<file.docx>" --project <PROJECT> --mode deep --apply-heuristic "<results.json>"
+"$PLUGIN_ROOT/.venv/bin/python" "$PLUGIN_ROOT/src/fpr_edit.py" "<file.docx>" --project <PROJECT> --mode deep --apply-heuristic "<results.json>"
 ```
 
 Report the final results to the user.
@@ -93,11 +113,12 @@ After completion, tell the user:
 
 ## Error Handling
 
-If the CLI fails, check `troubleshooting.md` for common errors. Key checks:
-1. Python 3.9+ is installed
-2. Dependencies are installed (`pip install -r requirements.txt`)
-3. The file path is valid and accessible
-4. The project folder exists in `projects/`
+If the CLI fails:
+1. Check if Python 3.9+ is installed: `python3 --version`
+2. Re-run setup: delete `.venv` in plugin root and let auto-setup recreate it
+3. Verify the file path is valid and accessible
+4. On macOS, check Full Disk Access permissions for Python
+5. See `troubleshooting.md` for more details
 
 ## References
 

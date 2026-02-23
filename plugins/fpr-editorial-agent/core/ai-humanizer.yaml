@@ -1,0 +1,397 @@
+meta:
+  source: "AI Uncanny Valley Pattern Catalog — compiled from 2024-2026 research"
+  version: "2026-02-19"
+  applies_to: all_projects
+  design_doc: "docs/plans/2026-02-19-ai-humanizer-design.md"
+
+deterministic_entries:
+  # ── EN: Filler Preambles (delete) ──────────────────────────────
+  - id: AIH-EN-001
+    original: "It is important to note that "
+    replacement: ""
+    rule: "Remove AI filler preamble"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-EN-002
+    original: "It is worth noting that "
+    replacement: ""
+    rule: "Remove AI filler preamble"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-EN-003
+    original: "It bears mentioning that "
+    replacement: ""
+    rule: "Remove AI filler preamble"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-EN-004
+    original: "It should be highlighted that "
+    replacement: ""
+    rule: "Remove AI filler preamble"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-EN-005
+    original: "No discussion would be complete without "
+    replacement: ""
+    rule: "Remove AI filler preamble"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-EN-006
+    original: "It goes without saying that "
+    replacement: ""
+    rule: "Remove AI filler preamble"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-EN-007
+    original: "While there are many factors to consider, "
+    replacement: ""
+    rule: "Remove AI filler preamble"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-EN-008
+    original: "In the ever-evolving landscape of "
+    replacement: ""
+    rule: "Remove AI filler preamble"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  # ── EN: Formulaic Transitions (delete) ─────────────────────────
+  - id: AIH-EN-010
+    original: "Furthermore, "
+    replacement: ""
+    rule: "Remove overused AI transition"
+    case_sensitive: true
+    applies_in: ["prose"]
+
+  - id: AIH-EN-011
+    original: "Moreover, "
+    replacement: ""
+    rule: "Remove overused AI transition"
+    case_sensitive: true
+    applies_in: ["prose"]
+
+  - id: AIH-EN-012
+    original: "Additionally, "
+    replacement: ""
+    rule: "Remove overused AI transition"
+    case_sensitive: true
+    applies_in: ["prose"]
+
+  - id: AIH-EN-013
+    original: "In conclusion, "
+    replacement: ""
+    rule: "Remove overused AI transition"
+    case_sensitive: true
+    applies_in: ["prose"]
+
+  - id: AIH-EN-014
+    original: "Moving forward, "
+    replacement: ""
+    rule: "Remove overused AI transition"
+    case_sensitive: true
+    applies_in: ["prose"]
+
+  - id: AIH-EN-015
+    original: "In light of this, "
+    replacement: ""
+    rule: "Remove overused AI transition"
+    case_sensitive: true
+    applies_in: ["prose"]
+
+  - id: AIH-EN-016
+    original: "With that in mind, "
+    replacement: ""
+    rule: "Remove overused AI transition"
+    case_sensitive: true
+    applies_in: ["prose"]
+
+  - id: AIH-EN-017
+    original: "As previously noted, "
+    replacement: ""
+    rule: "Remove overused AI transition"
+    case_sensitive: true
+    applies_in: ["prose"]
+
+  # ── EN: Inflated Importance (replace) ──────────────────────────
+  - id: AIH-EN-020
+    original: "plays a pivotal role in"
+    replacement: "contributes to"
+    rule: "Replace inflated importance phrase"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-EN-021
+    original: "plays a crucial role in"
+    replacement: "contributes to"
+    rule: "Replace inflated importance phrase"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-EN-022
+    original: "plays a vital role in"
+    replacement: "contributes to"
+    rule: "Replace inflated importance phrase"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  # ── EN: Participle Tailing Clauses (regex, delete) ─────────────
+  - id: AIH-EN-030
+    original: ", (emphasizing|highlighting|reflecting|underscoring|showcasing|demonstrating|illustrating|reinforcing) the (importance|significance|relevance|commitment|need|role|value)( of [^.]+)?\\."
+    replacement: "."
+    rule: "Remove AI participle tailing clause"
+    pattern_type: "regex"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  # ── ES: Muletillas de IA (delete) ──────────────────────────────
+  - id: AIH-ES-001
+    original: "Es importante destacar que "
+    replacement: ""
+    rule: "Eliminar muletilla de IA"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-ES-002
+    original: "Es importante señalar que "
+    replacement: ""
+    rule: "Eliminar muletilla de IA"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-ES-003
+    original: "Cabe mencionar que "
+    replacement: ""
+    rule: "Eliminar muletilla de IA"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-ES-004
+    original: "Cabe destacar que "
+    replacement: ""
+    rule: "Eliminar muletilla de IA"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-ES-005
+    original: "En este sentido, "
+    replacement: ""
+    rule: "Eliminar muletilla de IA"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-ES-006
+    original: "Resulta fundamental "
+    replacement: "Es clave "
+    rule: "Simplificar lenguaje burocrático de IA"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-ES-007
+    original: "Dicho de otro modo, "
+    replacement: ""
+    rule: "Eliminar muletilla de IA"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-ES-008
+    original: "Si bien es cierto que "
+    replacement: "Aunque "
+    rule: "Simplificar conector burocrático de IA"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-ES-009
+    original: "En definitiva, "
+    replacement: ""
+    rule: "Eliminar muletilla de IA"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-ES-010
+    original: "Para finalizar, "
+    replacement: ""
+    rule: "Eliminar muletilla de IA"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-ES-011
+    original: "Asimismo, "
+    replacement: "También, "
+    rule: "Simplificar conector formal de IA"
+    case_sensitive: true
+    applies_in: ["prose"]
+
+  - id: AIH-ES-012
+    original: "Por ende, "
+    replacement: "Por eso, "
+    rule: "Simplificar conector formal de IA"
+    case_sensitive: true
+    applies_in: ["prose"]
+
+  - id: AIH-ES-013
+    original: "En resumen, "
+    replacement: ""
+    rule: "Eliminar muletilla de IA"
+    case_sensitive: true
+    applies_in: ["prose"]
+
+  # ── ES: Calcos del Inglés (correct) ────────────────────────────
+  - id: AIH-ES-020
+    original: "hacer sentido"
+    replacement: "tener sentido"
+    rule: "Corregir calco del inglés (make sense)"
+    case_sensitive: false
+    applies_in: ["prose", "headings"]
+
+  - id: AIH-ES-021
+    original: "juega un rol vital"
+    replacement: "cumple una función esencial"
+    rule: "Corregir calco del inglés (plays a vital role)"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-ES-022
+    original: "en orden de"
+    replacement: "para"
+    rule: "Corregir calco del inglés (in order to)"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-ES-023
+    original: "es importante de mencionar"
+    replacement: "es importante mencionar"
+    rule: "Corregir calco del inglés (important to mention)"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+  - id: AIH-ES-024
+    original: "juega un rol crucial"
+    replacement: "cumple una función clave"
+    rule: "Corregir calco del inglés (plays a crucial role)"
+    case_sensitive: false
+    applies_in: ["prose"]
+
+heuristic_rules:
+  - id: AIH-H-001
+    rule: "EM DASH REWRITE"
+    description: >
+      When a sentence uses an em dash (—), rewrite using the punctuation
+      that best serves the context: comma, period, colon, or parentheses.
+      Only keep em dashes that add clear rhetorical value (pivot/contrast
+      that should pop, intentional cadence break, compressed emphasis).
+      Replace em dashes used for routine clarifiers (use parentheses),
+      simple appositives (use commas), or sentence joins (use period).
+    language: both
+    confidence_range: [0.75, 0.90]
+
+  - id: AIH-H-002
+    rule: "SENTENCE LENGTH VARIATION"
+    description: >
+      If all sentences in a paragraph cluster between 15-22 words (low
+      burstiness), vary them. Break one long sentence into two short ones,
+      or combine two short sentences. Target a mix of short (5-10 words),
+      medium (12-20), and long (22-35). Human writing has high standard
+      deviation in sentence length; AI writing has low.
+    language: both
+    confidence_range: [0.65, 0.80]
+
+  - id: AIH-H-003
+    rule: "AI SIGNAL WORD CLUSTERING"
+    description: >
+      Flag paragraphs containing 3 or more AI signal words and replace
+      with plain equivalents. Signal words: delve, robust, comprehensive,
+      pivotal, transformative, nuanced, multifaceted, leverage, foster,
+      streamline, harness, holistic, unprecedented, seamless, paramount,
+      cornerstone, catalyst, synergy, tapestry, landscape (figurative),
+      bolster, elevate, spearhead, navigate (figurative), cutting-edge,
+      groundbreaking. Replace each with the simplest accurate word.
+    language: en
+    confidence_range: [0.70, 0.85]
+
+  - id: AIH-H-004
+    rule: "ESPAÑOL NEUTRO → NATURAL"
+    description: >
+      Detect overly formal or generic Spanish that lacks regional
+      naturalness. Replace bureaucratic constructions with direct,
+      accessible Puerto Rican institutional Spanish. "Se caracteriza por"
+      → active verb. Avoid "español neutro" — text should sound like a
+      competent Puerto Rican professional wrote it, not a translation bot.
+      Do NOT introduce slang or colloquialisms — keep institutional register
+      but make it natural.
+    language: es
+    confidence_range: [0.65, 0.80]
+
+  - id: AIH-H-005
+    rule: "GERUNDIO ABUSIVO"
+    description: >
+      Flag gerunds (gerundios) not expressing simultaneity. Common AI
+      patterns: "Analizando los datos, se concluye" → "Al analizar los
+      datos, se concluye". "El programa fue creado mejorando" → "El
+      programa fue creado para mejorar". Gerunds are valid when expressing
+      simultaneity ("Caminando por la calle, vio el letrero") but AI uses
+      them as English present-participle calques.
+    language: es
+    confidence_range: [0.75, 0.85]
+
+  - id: AIH-H-006
+    rule: "NEGATIVE PARALLELISM"
+    description: >
+      Detect "It's not just X — it's Y" and "It's not merely X — it's Y"
+      patterns. Rewrite as direct statements. "It's not just a program —
+      it's a lifeline for communities" → "The program provides critical
+      support to communities." This is one of the most prominent AI tells
+      per Wikipedia's Signs of AI Writing guide.
+    language: en
+    confidence_range: [0.80, 0.90]
+
+  - id: AIH-H-007
+    rule: "PROMOTIONAL TONE IN REPORTS"
+    description: >
+      Flag travel-brochure and marketing language in institutional reports:
+      "breathtaking", "rich cultural tapestry", "unprecedented opportunity",
+      "groundbreaking initiative", "must-visit", "stunning natural beauty",
+      "vibrant community". Replace with specific, evidence-based descriptions.
+      This boosterism undermines credibility in PRDOH reports and plans.
+    language: both
+    confidence_range: [0.75, 0.85]
+
+  - id: AIH-H-008
+    rule: "HEDGE STACKING"
+    description: >
+      Flag sentences with 3 or more hedging devices co-occurring: may,
+      might, could, potentially, possibly, perhaps, arguably, somewhat,
+      to some extent. "It could potentially be argued that this may possibly
+      lead to improved outcomes" → "This approach may improve outcomes."
+      Reduce to at most one hedge per sentence.
+    language: en
+    confidence_range: [0.70, 0.80]
+
+  - id: AIH-H-009
+    rule: "VAGUE ATTRIBUTION"
+    description: >
+      Flag claims attributed to unnamed sources: "Industry reports
+      suggest...", "Observers have cited...", "Some critics argue...",
+      "Experts believe...", "Research indicates...", "Studies have shown..."
+      Either add a specific citation or rewrite as a direct statement
+      without the false authority appeal. In PRDOH reports, vague
+      attribution weakens credibility.
+    language: both
+    confidence_range: [0.70, 0.80]
+
+  - id: AIH-H-010
+    rule: "PASSIVE VOICE CLUSTERS (ES)"
+    description: >
+      Flag paragraphs in Spanish with excessive "se + verb" impersonal
+      constructions (4 or more in a single paragraph). "Se puede observar
+      que se han implementado medidas que se caracterizan por..." →
+      rewrite with active subjects. Some "se" constructions are natural in
+      Spanish; flag only when they cluster and obscure who does what.
+    language: es
+    confidence_range: [0.65, 0.75]

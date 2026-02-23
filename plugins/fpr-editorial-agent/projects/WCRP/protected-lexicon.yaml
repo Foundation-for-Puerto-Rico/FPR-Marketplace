@@ -1,0 +1,280 @@
+meta:
+  project: WCRP
+  source: "Marco de Planificación WCRP (Foundation for Puerto Rico, 2023) + documentos del programa"
+  note: >
+    Términos del Marco de Planificación WCRP con sus definiciones oficiales.
+    Estos términos técnicos son INTOCABLES — no simplificar, no parafrasear,
+    no sustituir por sinónimos informales. Forman el vocabulario oficial del programa.
+
+technical_terms:
+  description: "Definiciones según el Marco de Planificación WCRP — usar estas definiciones sin alteración"
+  entries:
+    - term: "sistema comunitario"
+      definition: "Los elementos, personas y activos económicos, sociales, culturales, naturales y construidos de la comunidad"
+      do_not_replace_with: ["comunidad", "la comunidad", "los activos"]
+      note: "Concepto central del marco — siempre en minúsculas salvo al inicio de oración"
+
+    - term: "amenaza"
+      definition: "Un evento o una condición física que tiene el potencial de causar daños o pérdidas"
+      do_not_replace_with: ["peligro", "riesgo", "problema"]
+      note: "Tiene definición técnica específica — no intercambiar con 'riesgo'"
+
+    - term: "riesgo"
+      definition: "Es una función de la severidad y probabilidad de la ocurrencia de una amenaza y la manera en que sus consecuencias pueden ser mediadas por la vulnerabilidad de los sistemas comunitarios expuestos"
+      do_not_replace_with: ["amenaza", "peligro"]
+      note: "Concepto técnico con definición precisa — no intercambiar con 'amenaza'"
+
+    - term: "vulnerabilidad"
+      definition: "El grado en que los sistemas de una comunidad son susceptibles a sufrir daños causados por una amenaza"
+      do_not_replace_with: ["debilidad", "fragilidad"]
+      note: "Incluye dimensiones sociales — no reducir a interpretación física"
+
+    - term: "exposición"
+      definition: "Presencia de sistemas comunitarios en áreas sujetas a amenazas"
+      do_not_replace_with: ["afectación", "impacto"]
+
+    - term: "sensibilidad"
+      definition: "El nivel al que los sistemas de una comunidad pueden ser impactados por una amenaza"
+      do_not_replace_with: ["vulnerabilidad", "debilidad"]
+      note: "Término técnico distinto de 'vulnerabilidad' en el marco"
+
+    - term: "susceptibilidad"
+      definition: "El estado o condición de una persona o cosa donde puede ser influenciado o dañado por una amenaza o impacto particular"
+      do_not_replace_with: ["vulnerabilidad", "riesgo"]
+
+    - term: "tensión"
+      definition: "Presión dinámica, grave y persistente que puede afectar de manera negativa a uno o varios sistemas de la comunidad"
+      do_not_replace_with: ["problema", "desafío", "dificultad"]
+      note: "Término técnico del marco — tiene sentido específico de presión persistente, no incidente"
+
+    - term: "capacidad adaptativa"
+      definition: "Se refiere a la habilidad o capacidad del sistema comunitario para moderar daños, o modificar o cambiar sus características, y comportamientos para afrontar las amenazas mejor"
+      do_not_replace_with: ["resiliencia", "capacidad de recuperación"]
+
+    - term: "medios de subsistencia"
+      definition: "Se refiere a los medios (naturales, materiales y sociales) que aseguran las necesidades de la vida y el bienestar"
+      do_not_replace_with: ["recursos", "bienes", "ingresos"]
+
+    - term: "necesidades de resiliencia"
+      definition: "Una declaración de necesidades para el fortalecimiento de la resiliencia comunitaria que incluye las amenazas, vulnerabilidades y tensiones que experimenta la comunidad"
+      do_not_replace_with: ["necesidades", "problemas", "prioridades"]
+
+    - term: "impacto"
+      definition: "Efectos en los sistemas comunitarios basados en la exposición y sensibilidad a una amenaza. Los impactos pueden ser directos o indirectos"
+      do_not_replace_with: ["daño", "consecuencia"]
+
+program_names:
+  description: "Nombres oficiales del programa — usar con acentos y capitalización exactos"
+  entries:
+    - "Programa de Planificación Integral de la Resiliencia Comunitaria (WCRP)"
+    - "Whole Community Resilience Planning (WCRP)"
+    - "Plan de Resiliencia Comunitaria (CRP)"
+    - "Community Resilience Plan (CRP)"
+    - "Marco de Planificación WCRP"
+    - "Foundation for Puerto Rico (FPR)"
+    - "Puerto Rico Department of Housing (PRDOH)"
+    - "Departamento de la Vivienda de Puerto Rico (PRDOH)"
+
+document_types:
+  description: "Nombres canónicos de los entregables del programa — usar exactamente estos nombres"
+  entries:
+    - name: "Plan de Resiliencia Comunitaria"
+      code: "8.1"
+      phase: "fase_4"
+      abbreviation: "CRP"
+
+    - name: "Condiciones Existentes"
+      code: "2.2"
+      phase: "fase_1"
+
+    - name: "Análisis de Vulnerabilidad y Riesgo"
+      code: "3.1-3.5"
+      phase: "fase_2"
+      note: "Incluye: análisis de exposición (3.1), sensibilidad (3.2), capacidad adaptativa (3.3), análisis de riesgo (3.4), necesidades de resiliencia (3.5)"
+
+    - name: "Acciones de Resiliencia"
+      code: "4.1-4.2"
+      phase: "fase_3"
+      note: "Visión, metas y acciones de resiliencia"
+
+    - name: "Acciones Priorizadas"
+      code: "4.3"
+      phase: "fase_3"
+
+process_structure:
+  description: "Estructura del proceso WCRP — no alterar nombres de roles y fases"
+  roles:
+    - "Subrecipiente (entidad facilitadora)"
+    - "Comité de Trabajo"
+    - "Comité de Monitoreo (CM)"
+    - "Enlace Comunitario"
+    - "Enlace Municipal"
+  phases:
+    - "Pre-Planificación"
+    - "Fase 1: Condiciones Existentes"
+    - "Fase 2: Análisis de Vulnerabilidad y Riesgo"
+    - "Fase 3: Acciones de Resiliencia"
+    - "Fase 4: Plan de Resiliencia Comunitaria"
+
+federal_terms:
+  description: "Términos federales CDBG-DR — NO simplificar bajo ninguna circunstancia"
+  entries:
+    - "Community Development Block Grant Disaster Recovery (CDBG-DR)"
+    - "beneficiario elegible"
+    - "actividad elegible"
+    - "período de performance"
+    - "plan de acción"
+    - "Acuerdo de Colaboración (MOU)"
+    - "Memorandum of Understanding (MOU)"
+
+infrastructure_terms:
+  description: "Términos de infraestructura locales de Puerto Rico — capitalización y forma exactas"
+  entries:
+    - term: "Non-PRASA"
+      note: >
+        Término oficial en Puerto Rico (en español e inglés) para sistemas de agua
+        no administrados por PRASA (Puerto Rico Aqueduct and Sewer Authority).
+        NO cambiar a 'no-PRASA', 'non-PRASA', ni ninguna otra variante.
+    - term: "PRASA"
+      note: "Puerto Rico Aqueduct and Sewer Authority — sigla protegida, no expandir ni cambiar"
+
+canonical_communities:
+  description: "Nombres canónicos de las 65 comunidades del programa con acentos correctos"
+  note: "Extraído de list_comunidades — usar EXACTAMENTE estos nombres en toda documentación"
+  regions:
+    norte:
+      - comunidad: "4ta Sección de Levittown"
+        municipio: "Toa Baja"
+      - comunidad: "Bajuras"
+        municipio: "Isabela"
+      - comunidad: "Barrio Dulce"
+        municipio: "San Juan"
+      - comunidad: "Ceiba Carmelita"
+        municipio: "Vega Alta"
+      - comunidad: "Galateos"
+        municipio: "Isabela"
+      - comunidad: "Guayabos"
+        municipio: "Isabela"
+      - comunidad: "Ingenio"
+        municipio: "Toa Baja"
+      - comunidad: "Jardines de Berwind"
+        municipio: "San Juan"
+      - comunidad: "Lagos de Plata"
+        municipio: "Toa Baja"
+      - comunidad: "Llanadas"
+        municipio: "Isabela"
+      - comunidad: "Mora y Guerra"
+        municipio: "Isabela"
+      - comunidad: "Planas"
+        municipio: "Isabela"
+      - comunidad: "Playita"
+        municipio: "San Juan"
+      - comunidad: "Río Piedras - Geográfico"
+        municipio: "San Juan"
+      - comunidad: "Río Piedras - Poblaciones Inmigrantes"
+        municipio: "San Juan"
+      - comunidad: "San José"
+        municipio: "Toa Baja"
+      - comunidad: "Seboruco"
+        municipio: "San Juan"
+      - comunidad: "Tortugo"
+        municipio: "San Juan"
+      - comunidad: "Villa Calma 1"
+        municipio: "Toa Baja"
+      - comunidad: "Villa Calma 2"
+        municipio: "Toa Baja"
+      - comunidad: "Villa Cañona"
+        municipio: "Loíza"
+      - comunidad: "Villa Clemente"
+        municipio: "San Juan"
+      - comunidad: "Villas del Sol"
+        municipio: "Toa Baja"
+    sur:
+      - comunidad: "Bélgica"
+        municipio: "Ponce"
+      - comunidad: "Canta Sapo"
+        municipio: "Santa Isabel"
+      - comunidad: "Centro Urbano de Coamo"
+        municipio: "Coamo"
+      - comunidad: "Centro Urbano de Ponce"
+        municipio: "Ponce"
+      - comunidad: "Centro Urbano de Yauco"
+        municipio: "Yauco"
+      - comunidad: "El Tuque"
+        municipio: "Ponce"
+      - comunidad: "Esperanza"
+        municipio: "Guánica"
+      - comunidad: "Montes Llanos"
+        municipio: "Ponce"
+      - comunidad: "Peñuelas"
+        municipio: "Santa Isabel"
+      - comunidad: "Playa de Ponce"
+        municipio: "Ponce"
+      - comunidad: "Población sin Hogar"
+        municipio: "Ponce"
+      - comunidad: "Siberia"
+        municipio: "Guánica"
+      - comunidad: "Tiburones"
+        municipio: "Ponce"
+    este:
+      - comunidad: "Barrio Calabazas"
+        municipio: "Yabucoa"
+      - comunidad: "Buena Vista"
+        municipio: "Humacao"
+      - comunidad: "Cubuy"
+        municipio: "Canóvanas"
+      - comunidad: "Cuenca Río Sabana"
+        municipio: "Luquillo"
+      - comunidad: "Juan Martín"
+        municipio: "Yabucoa"
+      - comunidad: "La Vega"
+        municipio: "Río Grande"
+      - comunidad: "Mariana"
+        municipio: "Humacao"
+      - comunidad: "Palmer"
+        municipio: "Río Grande"
+      - comunidad: "Pasto Seco"
+        municipio: "Las Piedras"
+      - comunidad: "Playa Guayanes"
+        municipio: "Yabucoa"
+      - comunidad: "Punta Santiago"
+        municipio: "Humacao"
+      - comunidad: "Punta Tuna"
+        municipio: "Maunabo"
+      - comunidad: "Río Blanco"
+        municipio: "Naguabo"
+      - comunidad: "Tropical Beach"
+        municipio: "Naguabo"
+      - comunidad: "Tumbao"
+        municipio: "Maunabo"
+      - comunidad: "Verde Mar"
+        municipio: "Humacao"
+    oeste:
+      - comunidad: "Centro Urbano de San Germán"
+        municipio: "San Germán"
+      - comunidad: "La Parguera"
+        municipio: "Lajas"
+    central:
+      - comunidad: "Cerro Gordo"
+        municipio: "San Lorenzo"
+      - comunidad: "Hato"
+        municipio: "San Lorenzo"
+      - comunidad: "Juan Asencio"
+        municipio: "Aguas Buenas"
+      - comunidad: "La Pica"
+        municipio: "Jayuya"
+      - comunidad: "Limón"
+        municipio: "Utuado"
+      - comunidad: "Paso Palma"
+        municipio: "Utuado"
+      - comunidad: "Quebrada Arenas"
+        municipio: "San Lorenzo"
+      - comunidad: "Santa Clara"
+        municipio: "Jayuya"
+      - comunidad: "Veguitas"
+        municipio: "Jayuya"
+      - comunidad: "Zamas"
+        municipio: "Jayuya"
+    islas:
+      - comunidad: "Villa Borinquen"
+        municipio: "Vieques"
