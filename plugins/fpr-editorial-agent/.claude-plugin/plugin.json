@@ -1,0 +1,16 @@
+{
+  "name": "fpr-editorial-agent",
+  "version": "2.0.0",
+  "description": "Applies Foundation for Puerto Rico style guides to DOCX documents as Word track changes. Supports ERSV and WCRP projects with deterministic and heuristic editing passes.",
+  "author": "Foundation for Puerto Rico",
+  "skills": [
+    "skills/editing-documents",
+    "skills/evaluating-heuristics"
+  ],
+  "commands": [
+    "commands/edit.md",
+    "commands/edit-ersv.md",
+    "commands/edit-wcrp.md",
+    "commands/health.md"
+  ]
+}

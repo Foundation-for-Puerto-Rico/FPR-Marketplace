@@ -1,0 +1,18 @@
+{
+  "name": "fpr-tools",
+  "owner": {
+    "name": "Foundation for Puerto Rico"
+  },
+  "metadata": {
+    "description": "Editorial and planning tools for FPR projects"
+  },
+  "plugins": [
+    {
+      "name": "fpr-editorial-agent",
+      "source": "./plugins/fpr-editorial-agent",
+      "description": "Applies FPR style guide to DOCX documents with track changes. Supports ERSV and WCRP projects.",
+      "version": "2.0.0",
+      "tags": ["editing", "style-guide", "WCRP", "ERSV", "docx", "track-changes"]
+    }
+  ]
+}
