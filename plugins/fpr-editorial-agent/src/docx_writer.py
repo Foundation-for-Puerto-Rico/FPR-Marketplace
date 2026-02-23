@@ -40,7 +40,7 @@ class DocxWriter:
         self.author = author
         self.initials = initials
         self._next_id_counter = None
-        self._next_comment_id = 0
+        self._next_comment_id = None
 
     def apply(self, result: EngineResult) -> dict:
         """Apply all suggestions from the engine result.
@@ -84,20 +84,34 @@ class DocxWriter:
     # ------------------------------------------------------------------
 
     def _init_id_counter(self) -> None:
-        """Scan document.xml for the highest existing w:id and start from there."""
+        """Scan document.xml AND comments.xml for the highest existing w:id."""
+        max_id = 0
+
+        # Scan document.xml
         doc_xml = self.unpacked_dir / "word" / "document.xml"
         tree = lxml.etree.parse(str(doc_xml))
-        root = tree.getroot()
-
-        max_id = 0
-        for elem in root.iter():
+        for elem in tree.getroot().iter():
             wid = elem.get(f"{W}id")
             if wid is not None:
                 try:
                     max_id = max(max_id, int(wid))
                 except ValueError:
                     pass
+
+        # Scan comments.xml if it exists (existing human comments)
+        comments_xml = self.unpacked_dir / "word" / "comments.xml"
+        if comments_xml.exists():
+            ctree = lxml.etree.parse(str(comments_xml))
+            for elem in ctree.getroot().iter():
+                wid = elem.get(f"{W}id")
+                if wid is not None:
+                    try:
+                        max_id = max(max_id, int(wid))
+                    except ValueError:
+                        pass
+
         self._next_id_counter = max_id + 1
+        self._next_comment_id = max_id + 1
 
     def _next_id(self) -> int:
         """Return the next unique w:id and increment the counter."""
@@ -342,20 +356,43 @@ class DocxWriter:
         )
 
         # 1. Inject comment range markers into document.xml
-        self._inject_comment_anchors(suggestion.original, comment_id, timestamp)
+        self._inject_comment_anchors(
+            suggestion.original, comment_id, timestamp, suggestion.paragraph_index
+        )
 
         # 2. Append comment entry to comments.xml
         self._append_to_comments_xml(comment_id, comment_text, timestamp)
 
-    def _inject_comment_anchors(self, original: str, comment_id: int, timestamp: str) -> None:
-        """Insert commentRangeStart/End and commentReference around the target run."""
+    def _inject_comment_anchors(
+        self, original: str, comment_id: int, timestamp: str, paragraph_index: int = -1
+    ) -> None:
+        """Insert commentRangeStart/End and commentReference around the target text.
+
+        Uses paragraph_index to anchor the comment in the correct paragraph,
+        avoiding false matches when the same text appears in multiple places.
+        """
         doc_xml = self.unpacked_dir / "word" / "document.xml"
         tree = lxml.etree.parse(str(doc_xml))
         root = tree.getroot()
 
         original = unicodedata.normalize("NFC", original)
 
-        for para in root.iter(f"{W}p"):
+        # Collect all paragraphs, then search only the target paragraph first
+        all_paras = list(root.iter(f"{W}p"))
+
+        # Build search order: target paragraph first, then neighbors, then all
+        if 0 <= paragraph_index < len(all_paras):
+            search_order = [all_paras[paragraph_index]]
+            # Add nearby paragraphs as fallback (±3)
+            for offset in range(1, 4):
+                if paragraph_index - offset >= 0:
+                    search_order.append(all_paras[paragraph_index - offset])
+                if paragraph_index + offset < len(all_paras):
+                    search_order.append(all_paras[paragraph_index + offset])
+        else:
+            search_order = all_paras
+
+        for para in search_order:
             runs = self._get_text_runs(para)
             if not runs:
                 continue
@@ -368,30 +405,34 @@ class DocxWriter:
             affected = self._get_affected_runs(offset_map, idx, idx + len(original))
             if not affected:
                 continue
-            anchor_run = affected[0]["run"]
-            parent = anchor_run.getparent()
-            pos = list(parent).index(anchor_run)
 
-            # <w:commentRangeStart w:id="N"/>
+            # Place commentRangeStart before first affected run
+            first_run = affected[0]["run"]
+            last_run = affected[-1]["run"]
+            first_parent = first_run.getparent()
+            last_parent = last_run.getparent()
+
+            # commentRangeStart — before first affected run
+            pos = list(first_parent).index(first_run)
             cs = lxml.etree.Element(f"{W}commentRangeStart")
             cs.set(f"{W}id", str(comment_id))
-            parent.insert(pos, cs)
+            first_parent.insert(pos, cs)
 
-            # <w:commentRangeEnd w:id="N"/> — after the anchor run (pos+2 because we inserted cs)
+            # commentRangeEnd — after last affected run
+            end_pos = list(last_parent).index(last_run) + 1
             ce = lxml.etree.Element(f"{W}commentRangeEnd")
             ce.set(f"{W}id", str(comment_id))
-            anchor_pos_after = list(parent).index(anchor_run) + 1
-            parent.insert(anchor_pos_after, ce)
+            last_parent.insert(end_pos, ce)
 
-            # <w:r><w:rPr><w:rStyle w:val="CommentReference"/></w:rPr>
-            #   <w:commentReference w:id="N"/></w:r>
+            # commentReference run — after commentRangeEnd
             ref_run = lxml.etree.Element(f"{W}r")
             rpr = lxml.etree.SubElement(ref_run, f"{W}rPr")
             rs = lxml.etree.SubElement(rpr, f"{W}rStyle")
             rs.set(f"{W}val", "CommentReference")
             cref = lxml.etree.SubElement(ref_run, f"{W}commentReference")
             cref.set(f"{W}id", str(comment_id))
-            parent.insert(anchor_pos_after + 1, ref_run)
+            ref_pos = list(last_parent).index(ce) + 1
+            last_parent.insert(ref_pos, ref_run)
 
             tree.write(str(doc_xml), xml_declaration=True, encoding="UTF-8", standalone=True)
             return
