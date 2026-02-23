@@ -1,7 +1,10 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "fpr-tools",
+  "description": "Editorial and planning tools for FPR projects",
   "owner": {
-    "name": "Foundation for Puerto Rico"
+    "name": "Foundation for Puerto Rico",
+    "url": "https://github.com/FulanoXpr"
   },
   "metadata": {
     "description": "Editorial and planning tools for FPR projects"
@@ -9,9 +12,12 @@
   "plugins": [
     {
       "name": "fpr-editorial-agent",
-      "source": "./plugins/fpr-editorial-agent",
       "description": "Applies FPR style guide to DOCX documents with track changes. Supports ERSV and WCRP projects.",
       "version": "2.0.0",
+      "author": {
+        "name": "Foundation for Puerto Rico"
+      },
+      "source": "./plugins/fpr-editorial-agent",
       "tags": ["editing", "style-guide", "WCRP", "ERSV", "docx", "track-changes"]
     }
   ]
