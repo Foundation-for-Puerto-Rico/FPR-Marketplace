@@ -7,7 +7,7 @@ Plugin marketplace for Foundation for Puerto Rico editorial tools.
 ### Add the marketplace
 
 ```
-/plugin marketplace add FulanoXpr/FPR-Marketplace
+/plugin marketplace add Foundation-for-Puerto-Rico/FPR-Marketplace
 ```
 
 ### Install a plugin
@@ -30,7 +30,7 @@ Add to your project's `.claude/settings.json`:
 {
   "extraKnownMarketplaces": {
     "fpr-tools": {
-      "source": { "source": "github", "repo": "FulanoXpr/FPR-Marketplace" }
+      "source": { "source": "github", "repo": "Foundation-for-Puerto-Rico/FPR-Marketplace" }
     }
   },
   "enabledPlugins": {

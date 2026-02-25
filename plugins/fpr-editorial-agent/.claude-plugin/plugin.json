@@ -4,8 +4,8 @@
   "description": "Applies Foundation for Puerto Rico style guides to DOCX documents as Word track changes. Supports ERSV and WCRP projects with deterministic and heuristic editing passes.",
   "author": {
     "name": "Foundation for Puerto Rico",
-    "url": "https://github.com/FulanoXpr"
+    "url": "https://github.com/Foundation-for-Puerto-Rico"
   },
-  "repository": "https://github.com/FulanoXpr/FPR-Marketplace",
+  "repository": "https://github.com/Foundation-for-Puerto-Rico/FPR-Marketplace",
   "keywords": ["editing", "style-guide", "WCRP", "ERSV", "docx", "track-changes"]
 }
