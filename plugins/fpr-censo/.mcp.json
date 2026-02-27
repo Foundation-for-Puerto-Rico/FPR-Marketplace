@@ -2,7 +2,7 @@
   "mcpServers": {
     "fpr-censo": {
       "type": "streamable-http",
-      "url": "http://35.202.239.234:8001/mcp"
+      "url": "https://censo.wcrprag.shop/mcp"
     }
   }
 }

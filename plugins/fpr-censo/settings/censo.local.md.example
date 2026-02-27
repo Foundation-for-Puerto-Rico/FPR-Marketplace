@@ -2,7 +2,7 @@
 
 ## Servidor MCP
 
-El plugin conecta al servidor remoto en GCP automaticamente via `.mcp.json`.
+El plugin conecta al servidor remoto via HTTPS (`https://censo.wcrprag.shop/mcp`) automaticamente.
 No necesitas configurar nada para usar el servidor remoto.
 
 Para usar un servidor local en su lugar, edita el archivo `.mcp.json` del plugin:

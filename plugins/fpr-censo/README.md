@@ -80,7 +80,7 @@ Todos los estimados del ACS incluyen Margin of Error (MOE) y evaluacion de confi
 
 ## Servidor
 
-El plugin conecta automaticamente al servidor MCP remoto alojado en GCP. No necesitas instalar ni configurar nada adicional.
+El plugin conecta automaticamente al servidor MCP remoto via HTTPS. No necesitas instalar ni configurar nada adicional.
 
 Para usar un servidor local, edita `.mcp.json` en el directorio del plugin y cambia la URL a `http://localhost:8001/mcp`.
 
