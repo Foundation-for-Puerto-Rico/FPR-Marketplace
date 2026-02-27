@@ -1,0 +1,21 @@
+# Configuracion local — fpr-censo
+
+## URL del servidor MCP
+
+Por defecto el plugin conecta al servidor remoto en GCP. Si tienes una instancia local:
+
+```
+CENSO_MCP_URL=http://localhost:8001/mcp
+```
+
+## Preferencias de datos
+
+- Dataset preferido: acs/acs5 (5-Year, mejor cobertura)
+- Anio preferido: 2022 (mas reciente disponible)
+- Nivel de detalle: municipio (default), barrio (si disponible)
+
+## Contexto organizacional
+
+- Programa: [WCRP / Turismo / Emprendimiento / Vivienda / General]
+- Region de interes: [Sur / Norte / Metro / Este / Oeste / Toda la isla]
+- Idioma de reportes: espanol

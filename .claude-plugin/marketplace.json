@@ -1,13 +1,13 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "fpr-tools",
-  "description": "Editorial, brand voice, and planning tools for FPR projects",
+  "description": "Editorial, brand voice, data, and planning tools for FPR projects",
   "owner": {
     "name": "Foundation for Puerto Rico",
     "url": "https://github.com/Foundation-for-Puerto-Rico"
   },
   "metadata": {
-    "description": "Editorial, brand voice, and planning tools for FPR projects"
+    "description": "Editorial, brand voice, data, and planning tools for FPR projects"
   },
   "plugins": [
     {
@@ -29,6 +29,16 @@
       },
       "source": "./plugins/brand-voice",
       "tags": ["brand-voice", "FPR", "content-creation", "guidelines", "enforcement", "resilience", "WCRP", "ERSV"]
+    },
+    {
+      "name": "fpr-censo",
+      "description": "U.S. Census Bureau data for Puerto Rico. Query demographics, economics, housing, education, and more for 78 municipios and their barrios. Includes statistical quality assessment (MOE/CV).",
+      "version": "1.0.0",
+      "author": {
+        "name": "Foundation for Puerto Rico"
+      },
+      "source": "./plugins/fpr-censo",
+      "tags": ["census", "Puerto Rico", "demographics", "ACS", "municipios", "data", "statistics", "FPR"]
     }
   ]
 }

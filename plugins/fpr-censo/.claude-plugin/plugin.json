@@ -1,0 +1,11 @@
+{
+  "name": "fpr-censo",
+  "version": "1.0.0",
+  "description": "Datos del U.S. Census Bureau para Puerto Rico. Consulta poblacion, economia, vivienda, educacion y mas para los 78 municipios y sus barrios. Incluye evaluacion de calidad estadistica (MOE/CV).",
+  "author": {
+    "name": "Foundation for Puerto Rico",
+    "url": "https://github.com/Foundation-for-Puerto-Rico"
+  },
+  "repository": "https://github.com/Foundation-for-Puerto-Rico/FPR-Marketplace",
+  "keywords": ["census", "Puerto Rico", "demographics", "ACS", "municipios", "data", "statistics"]
+}
