@@ -1,13 +1,13 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "fpr-tools",
-  "description": "Editorial and planning tools for FPR projects",
+  "description": "Editorial, brand voice, and planning tools for FPR projects",
   "owner": {
     "name": "Foundation for Puerto Rico",
     "url": "https://github.com/Foundation-for-Puerto-Rico"
   },
   "metadata": {
-    "description": "Editorial and planning tools for FPR projects"
+    "description": "Editorial, brand voice, and planning tools for FPR projects"
   },
   "plugins": [
     {
@@ -19,6 +19,16 @@
       },
       "source": "./plugins/fpr-editorial-agent",
       "tags": ["editing", "style-guide", "WCRP", "ERSV", "docx", "track-changes"]
+    },
+    {
+      "name": "brand-voice",
+      "description": "Enforces FPR brand voice across federal proposals, pillar briefs, public communications, and community materials. Includes voice identity, paragraph architecture, equity framing, and tone-by-context matrix.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Foundation for Puerto Rico"
+      },
+      "source": "./plugins/brand-voice",
+      "tags": ["brand-voice", "FPR", "content-creation", "guidelines", "enforcement", "resilience", "WCRP", "ERSV"]
     }
   ]
 }

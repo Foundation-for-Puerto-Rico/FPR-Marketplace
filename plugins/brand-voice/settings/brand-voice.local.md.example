@@ -1,0 +1,76 @@
+---
+# Brand Voice Plugin Settings
+# Copy this file to .claude/brand-voice.local.md and fill in your values.
+# Required fields: company_name. All other fields are optional with sensible defaults.
+company_name: "Foundation for Puerto Rico"          # required
+platforms:
+  notion: false
+  confluence: false
+  google-drive: true
+  box: false
+  microsoft-365: true
+  figma: false
+  gong: false
+  granola: false
+  slack: false
+discovery:
+  search-depth: deep    # standard | deep
+  max-sources: 20
+enforcement:
+  strictness: strict      # strict | balanced | flexible
+  always-explain: true
+open-questions:
+  share-with-team: false
+---
+# Brand Context
+
+## Company Name
+Foundation for Puerto Rico (FPR)
+
+## Known Brand Materials
+- SharePoint site: [FPR SharePoint — add URL when available]
+- Google Drive folder: [FPR Brand Guidelines folder — add URL when available]
+
+## Sub-brands
+FPR operates three sub-brands, each with distinct visual identity but shared voice:
+- **Center for a New Economy (CNE)** — research and policy institute
+- **Colaboratorio** — collaborative innovation platform
+- **Bottom Up** — community-driven development initiative
+
+## Additional Context
+Foundation for Puerto Rico is a 501(c)(3) nonprofit focused on socioeconomic development and community resilience across Puerto Rico. FPR works at the intersection of governance, economic development, tourism/visitor economy, human capital, and community resilience.
+
+### Core Values (Brand Pillars)
+- **Innovation** — new ways of connecting, collaborating, and solving problems
+- **Connection** — bridging sectors, municipalities, and stakeholders
+- **Empowerment** — building community capacity and agency
+- **Boldness** — challenging the status quo and proposing systemic alternatives
+- **Courage** — taking positions and leading change even when difficult
+
+### Target Audiences
+- Federal funders (HUD, FEMA, federal agencies)
+- Municipal governments and public agencies across Puerto Rico
+- Community stakeholders and residents
+- Private sector partners and philanthropic organizations
+- Regional governance bodies and multisector coalitions
+
+### Key Programs / Product Lines
+- Whole Community Resilience Planning (WCRP) — HUD-funded community resilience plans
+- Estrategia de Resiliencia del Sur y Vieques (ERSV) — southern regional strategy
+- Regional Governance Frameworks — multisector coordination bodies
+- Visitor Economy / Sustainable Destination Management
+- Human Capital Development
+
+### Voice Protection Notes
+FPR content follows a "preserve-first" editing approach. The institutional voice uses signature vocabulary that should never be flattened into generic synonyms. See the Voice Protection Playbook for the full do-not-flatten vocabulary list and paragraph architecture rules.
+
+### Citation Style
+- Numbered footnotes for in-text citations
+- APA reference style in the footnote
+- No full reference list (policy institute style)
+- Goal: decision-maker credibility + readability
+
+### Language
+- Primary: English
+- Secondary: Spanish (documents are often bilingual)
+- FPR maintains a comprehensive English-to-Spanish style guide for translation consistency
