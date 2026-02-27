@@ -17,6 +17,7 @@ Plugin de Claude Code para consultar datos del U.S. Census Bureau, optimizado pa
 | `/fpr-censo:consultar` | Consulta flexible en lenguaje natural |
 | `/fpr-censo:perfil` | Perfil tematico de un municipio o barrio |
 | `/fpr-censo:comparar` | Comparar dos o mas geografias lado a lado |
+| `/fpr-censo:serie` | Tendencia temporal de un indicador |
 
 ## Ejemplos de uso
 
@@ -36,6 +37,12 @@ Plugin de Claude Code para consultar datos del U.S. Census Bureau, optimizado pa
 
 ```
 /fpr-censo:comparar Bayamon vs Carolina en vivienda
+```
+
+### Serie temporal
+
+```
+/fpr-censo:serie poblacion de Bayamon desde 2015
 ```
 
 ## Datos disponibles
@@ -71,9 +78,11 @@ Todos los estimados del ACS incluyen Margin of Error (MOE) y evaluacion de confi
 - **data-researcher**: Investigacion de datos que requiere multiples consultas combinadas
 - **quality-assessor**: Evaluacion rapida de calidad estadistica de estimados
 
-## Requisitos
+## Servidor
 
-El servidor MCP debe estar corriendo en `http://35.202.239.234:8001/mcp`. Para configurar un servidor local, ver el [repositorio del MCP](https://github.com/Foundation-for-Puerto-Rico/fpr-censo-mcp).
+El plugin conecta automaticamente al servidor MCP remoto alojado en GCP. No necesitas instalar ni configurar nada adicional.
+
+Para usar un servidor local, edita `.mcp.json` en el directorio del plugin y cambia la URL a `http://localhost:8001/mcp`.
 
 ## Licencia
 

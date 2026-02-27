@@ -11,9 +11,11 @@ Consulta datos del U.S. Census Bureau para Puerto Rico basado en la pregunta del
 
 2. **Resolver geografia**: Si el usuario menciona un municipio o barrio, usa `censo_listar_municipios` o `censo_listar_barrios` para obtener el FIPS code correcto.
 
-3. **Buscar variables**: Si la pregunta es sobre un tema especifico, usa `censo_buscar_variables` para encontrar las variables ACS correctas. Si es un tema comun (poblacion, ingreso, pobreza), usa directamente las variables conocidas.
+3. **Buscar variables**: Si la pregunta es sobre un tema especifico, usa `censo_buscar_variables` para encontrar las variables ACS correctas. Si es un tema comun (poblacion, ingreso, pobreza), usa directamente las variables conocidas del perfil tematico correspondiente (ver `references/perfiles-tematicos.md`).
 
 4. **Ejecutar consulta**: Llama `censo_consultar` con el dataset apropiado (normalmente `acs/acs5`), anio mas reciente disponible, variables identificadas, y geografia resuelta.
+
+   **IMPORTANTE sobre MOE**: `censo_consultar` NO agrega automaticamente las variables de MOE. Debes incluir AMBOS codigos en la lista de variables: el estimado (`_E`) y su MOE (`_M`). Ejemplo: para poblacion total, pasa `["B01003_001E", "B01003_001M"]`, no solo `["B01003_001E"]`.
 
 5. **Evaluar calidad**: Para cada estimado devuelto, verifica el Margin of Error. Si el CV > 30%, advierte al usuario que el dato no es confiable. Usa `censo_evaluar_calidad` si necesitas un analisis detallado.
 

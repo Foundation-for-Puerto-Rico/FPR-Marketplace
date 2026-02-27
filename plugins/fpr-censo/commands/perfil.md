@@ -11,9 +11,11 @@ Genera un perfil tematico completo para una geografia de Puerto Rico usando $ARG
    - "demografico de Bayamon"
    - "economico de Vega Baja"
    - "vivienda de Almirante Sur, Vega Baja"
-   - "completo de Carolina" (todos los perfiles)
+   - "completo de Carolina" (ejecuta los 6 perfiles)
 
 2. **Perfiles disponibles**: demografico, economico, vivienda, educacion, salud_social, infraestructura. Si no se especifica, usar "demografico" como default.
+
+   **Nota sobre "completo"**: `censo_perfil` solo acepta un perfil a la vez (o `None` para resumen ejecutivo). Si el usuario pide "completo", debes llamar `censo_perfil` una vez por cada uno de los 6 perfiles y combinar los resultados en un solo documento.
 
 3. **Resolver geografia**: Usa `censo_listar_municipios` o `censo_listar_barrios` para obtener el FIPS correcto.
 

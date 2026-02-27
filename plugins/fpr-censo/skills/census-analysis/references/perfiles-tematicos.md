@@ -1,89 +1,78 @@
 # Perfiles Tematicos — Variables ACS
 
-Variables pre-seleccionadas por perfil tematico, usadas por `censo_perfil`.
+Variables curadas por perfil tematico. Estas son las variables exactas que `censo_perfil` consulta.
+Para cada variable, siempre solicitar tambien el codigo MOE (columna `_M`).
 
 ## demografico
 
-| Variable | Descripcion |
-|----------|-------------|
-| B01003_001E | Poblacion total |
-| B01002_001E | Edad mediana |
-| B01001_002E | Poblacion masculina |
-| B01001_026E | Poblacion femenina |
-| B02001_002E | Raza: Blanco solo |
-| B02001_003E | Raza: Negro o afroamericano solo |
-| B03003_003E | Origen hispano o latino |
-| B01001_003E-B01001_006E | Poblacion 0-17 anios (menores) |
-| B01001_020E-B01001_025E | Poblacion 65+ anios (envejecientes) |
+| Variable | MOE | Descripcion | Formato |
+|----------|-----|-------------|---------|
+| B01003_001E | B01003_001M | Poblacion total | conteo |
+| B01002_001E | B01002_001M | Edad mediana | mediana |
+| B01001_002E | B01001_002M | Poblacion masculina | conteo |
+| B01001_026E | B01001_026M | Poblacion femenina | conteo |
+| B09001_001E | B09001_001M | Menores de 18 anios | conteo |
+| B03003_003E | B03003_003M | Hispanic o Latino | conteo |
 
 ## economico
 
-| Variable | Descripcion |
-|----------|-------------|
-| B19013_001E | Ingreso mediano del hogar |
-| B19301_001E | Ingreso per capita |
-| B17001_002E | Personas bajo nivel de pobreza |
-| B17001_001E | Personas para las que se determina pobreza (universo) |
-| B23025_003E | Fuerza laboral civil |
-| B23025_005E | Desempleados |
-| B23025_002E | En la fuerza laboral |
-| C24010_001E | Empleados por industria (total) |
-| B19001_001E | Hogares por nivel de ingreso (total) |
+| Variable | MOE | Descripcion | Formato |
+|----------|-----|-------------|---------|
+| B19013_001E | B19013_001M | Ingreso mediano del hogar | moneda |
+| B19301_001E | B19301_001M | Ingreso per capita | moneda |
+| B17001_002E | B17001_002M | Personas bajo nivel de pobreza | conteo |
+| B23025_005E | B23025_005M | Desempleados | conteo |
+| B23025_002E | B23025_002M | Fuerza laboral | conteo |
+| B22003_002E | B22003_002M | Hogares con SNAP/cupones | conteo |
+
+**Nota**: Tasa de desempleo = B23025_005E / B23025_002E. Tasa de pobreza requiere el universo B17001_001E (no incluido por default; usar `censo_consultar` para obtenerlo).
 
 ## vivienda
 
-| Variable | Descripcion |
-|----------|-------------|
-| B25001_001E | Unidades de vivienda total |
-| B25002_002E | Unidades ocupadas |
-| B25002_003E | Unidades vacantes |
-| B25003_002E | Ocupadas por duenio |
-| B25003_003E | Ocupadas por inquilino |
-| B25077_001E | Valor mediano (unidades del duenio) |
-| B25064_001E | Renta mediana bruta |
-| B25034_001E | Anio de construccion (total) |
-| B25024_001E | Unidades en estructura (total) |
+| Variable | MOE | Descripcion | Formato |
+|----------|-----|-------------|---------|
+| B25001_001E | B25001_001M | Unidades de vivienda total | conteo |
+| B25002_002E | B25002_002M | Viviendas ocupadas | conteo |
+| B25002_003E | B25002_003M | Viviendas vacantes | conteo |
+| B25077_001E | B25077_001M | Valor mediano de vivienda | moneda |
+| B25064_001E | B25064_001M | Renta mediana | moneda |
+| B25081_002E | B25081_002M | Viviendas sin hipoteca | conteo |
 
 ## educacion
 
-| Variable | Descripcion |
-|----------|-------------|
-| B15003_001E | Poblacion 25+ (universo educativo) |
-| B15003_017E | Diploma de escuela superior |
-| B15003_022E | Bachillerato (Bachelor's) |
-| B15003_023E | Maestria |
-| B15003_025E | Doctorado |
-| B14001_002E | Matriculados en escuela (3+ anios) |
+| Variable | MOE | Descripcion | Formato |
+|----------|-----|-------------|---------|
+| B15003_017E | B15003_017M | Diploma de escuela superior | conteo |
+| B15003_022E | B15003_022M | Grado de bachillerato (BA) | conteo |
+| B15003_023E | B15003_023M | Grado de maestria | conteo |
+| B15003_025E | B15003_025M | Grado doctoral | conteo |
+| B14001_002E | B14001_002M | Matricula escolar (3+ anios) | conteo |
+
+**Nota**: Universo educativo = poblacion 25+ anios. Para porcentajes, usar `censo_consultar` con B15003_001E como denominador.
 
 ## salud_social
 
-| Variable | Descripcion |
-|----------|-------------|
-| B27001_001E | Total para cobertura de seguro medico |
-| B27001_004E | Con seguro medico (menores 6 anios) |
-| B27001_007E | Sin seguro medico (menores 6 anios) |
-| B18101_001E | Total para estatus de discapacidad |
-| B18101_004E | Con discapacidad (menores 5 anios) |
-| C16001_001E | Poblacion 5+ por idioma hablado en hogar |
-| C16001_002E | Solo ingles |
-| C16001_003E | Espanol |
+| Variable | MOE | Descripcion | Formato |
+|----------|-----|-------------|---------|
+| B27001_005E | B27001_005M | Sin seguro medico (menores 19) | conteo |
+| B21001_002E | B21001_002M | Veteranos | conteo |
+| B18101_004E | B18101_004M | Con discapacidad (menores 18) | conteo |
+
+**Nota**: Este perfil tiene pocas variables curadas. Para datos mas detallados de salud, usar `censo_buscar_variables` con keywords como "insurance", "disability", "language".
 
 ## infraestructura
 
-| Variable | Descripcion |
-|----------|-------------|
-| B28002_001E | Total hogares (internet) |
-| B28002_002E | Con suscripcion a internet |
-| B28002_013E | Sin internet |
-| B08301_001E | Trabajadores 16+ (medio de transporte) |
-| B08301_002E | Auto, camion o van (solo) |
-| B08301_010E | Transporte publico |
-| B08301_021E | Trabaja desde el hogar |
-| B25044_001E | Vehiculos disponibles por hogar |
+| Variable | MOE | Descripcion | Formato |
+|----------|-----|-------------|---------|
+| B28002_004E | B28002_004M | Hogares con internet de banda ancha | conteo |
+| B08201_002E | B08201_002M | Hogares sin vehiculo | conteo |
+| B08301_010E | B08301_010M | Transporte publico al trabajo | conteo |
+| B08301_003E | B08301_003M | Viaja solo en carro al trabajo | conteo |
 
-## Notas
+## Notas generales
 
-- Todas las variables usan el sufijo `_001E` para estimado y `_001M` para MOE
+- Para cada variable `_E` (estimado), siempre solicitar la variable `_M` (margin of error) correspondiente
+- El sufijo numerico varia por variable (no todas usan `_001`). Usar los codigos exactos de esta tabla
 - El ACS 5-Year (2018-2022) tiene la mejor cobertura para PR
-- Para block groups, solo estan disponibles las tablas basicas (B01, B02, B03, B19, B25)
-- Las variables de detalle (por edad, por industria) requieren tablas expandidas
+- Para block groups, solo estan disponibles tablas basicas — muchos estimados tendran CV > 30%
+- Variables no listadas aqui pueden consultarse con `censo_buscar_variables` y `censo_consultar`

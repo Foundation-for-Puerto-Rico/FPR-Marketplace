@@ -114,9 +114,16 @@ Consulta `references/jerarquia-geografica.md` para la estructura geografica de P
 - Siempre incluir el anio y dataset fuente
 - Si el usuario pide datos para un programa especifico de FPR (WCRP, turismo, etc.), adaptar la narrativa al contexto del programa pero no omitir datos
 
+## MOE en censo_consultar
+
+`censo_consultar` NO agrega automaticamente las variables de MOE. Cuando uses este tool, incluye AMBOS codigos: el estimado (`_E`) y su MOE (`_M`). Ejemplo: `["B01003_001E", "B01003_001M"]`.
+
+`censo_perfil` y `censo_serie_temporal` SI incluyen MOE automaticamente.
+
 ## Errores comunes a evitar
 
 1. No usar ACS 1-Year para municipios con < 65,000 habitantes
 2. No comparar estimados de diferentes anios del ACS sin advertir sobre solapamiento de muestras
 3. No presentar porcentajes derivados sin propagar el MOE
 4. No asumir que un barrio tiene datos disponibles — verificar primero
+5. No olvidar pedir variables MOE junto al estimado en `censo_consultar`

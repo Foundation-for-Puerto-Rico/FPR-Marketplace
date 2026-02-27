@@ -1,11 +1,21 @@
 # Configuracion local — fpr-censo
 
-## URL del servidor MCP
+## Servidor MCP
 
-Por defecto el plugin conecta al servidor remoto en GCP. Si tienes una instancia local:
+El plugin conecta al servidor remoto en GCP automaticamente via `.mcp.json`.
+No necesitas configurar nada para usar el servidor remoto.
 
-```
-CENSO_MCP_URL=http://localhost:8001/mcp
+Para usar un servidor local en su lugar, edita el archivo `.mcp.json` del plugin:
+
+```json
+{
+  "mcpServers": {
+    "fpr-censo": {
+      "type": "streamable-http",
+      "url": "http://localhost:8001/mcp"
+    }
+  }
+}
 ```
 
 ## Preferencias de datos
