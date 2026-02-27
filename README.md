@@ -1,6 +1,6 @@
 # FPR Tools Marketplace
 
-Plugin marketplace for Foundation for Puerto Rico editorial tools.
+Plugin marketplace for Foundation for Puerto Rico tools — editorial, brand voice, and data.
 
 ## Installation
 
@@ -22,12 +22,19 @@ Plugin marketplace for Foundation for Puerto Rico editorial tools.
 /plugin install brand-voice@fpr-tools
 ```
 
+### Install Census Data (Puerto Rico)
+
+```
+/plugin install fpr-censo@fpr-tools
+```
+
 ## Available Plugins
 
 | Plugin | Description |
 |--------|-------------|
 | `fpr-editorial-agent` | Applies FPR style guide to DOCX documents with track changes |
 | `brand-voice` | Enforces FPR brand voice across proposals, briefs, public comms, and community materials |
+| `fpr-censo` | U.S. Census Bureau data for Puerto Rico — demographics, economics, housing, education for 78 municipios |
 
 ## Auto-provisioning
 
@@ -42,7 +49,8 @@ Add to your project's `.claude/settings.json`:
   },
   "enabledPlugins": {
     "fpr-editorial-agent@fpr-tools": true,
-    "brand-voice@fpr-tools": true
+    "brand-voice@fpr-tools": true,
+    "fpr-censo@fpr-tools": true
   }
 }
 ```

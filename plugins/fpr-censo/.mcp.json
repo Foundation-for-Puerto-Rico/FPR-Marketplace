@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "fpr-censo": {
+      "type": "http",
+      "url": "http://35.202.239.234:8001/mcp"
+    }
+  }
+}
