@@ -4,7 +4,7 @@ Platform-specific query patterns and tips for maximizing brand material discover
 
 ## Notion (Primary Discovery Engine)
 
-Notion AI Search federates across connected sources (Google Drive, SharePoint, OneDrive, Slack, Jira, Teams), making it the most valuable single search endpoint.
+Notion AI Search federates across connected sources (SharePoint, OneDrive, Slack, Jira, Teams), making it the most valuable single search endpoint.
 
 ### Query Patterns
 
@@ -88,32 +88,6 @@ Cloud file storage — official brand documents, shared decks, and style guides 
 - Look for folders shared with the marketing or brand team
 - Search for recently modified brand documents to find the latest version
 - Use Box metadata search to filter by content type or custom attributes
-
-## Google Drive
-
-Google Drive stores shared brand documents, marketing materials, and official style guides.
-
-### Query Patterns
-
-**Folder search:**
-- "Brand Guidelines"
-- "Marketing"
-- "Brand Assets"
-- "Style Guide"
-
-**Document search:**
-- "brand guide" (PDFs, Google Docs, Google Slides)
-- "style guide"
-- "messaging framework"
-- "brand standards"
-- "brand voice"
-
-### Tips
-- Check shared drives — brand materials often live in team-wide shared drives
-- Look for recently modified brand documents to find the latest version
-- Search by owner (marketing team members) to surface brand-owned content
-- Google Docs and Slides are common formats for living brand documents
-- Check for Google Slides presentations with brand overview decks
 
 ## Microsoft 365 (SharePoint / OneDrive)
 
@@ -246,9 +220,8 @@ Visual brand elements inform voice and tone indirectly.
 ### Maximizing Coverage
 1. Start with Notion AI Search (broadest coverage via federation)
 2. Follow up with Confluence for enterprise documentation
-3. Check Google Drive for official brand documents
-4. Check Box for cloud-stored brand documents
-5. Search SharePoint/OneDrive for enterprise files
+3. Check Box for cloud-stored brand documents
+4. Search SharePoint/OneDrive for enterprise files
 6. Search Slack for brand discussions and decisions
 7. Search Gong for conversational brand patterns
 8. Search Granola for meeting transcripts and notes

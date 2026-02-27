@@ -6,7 +6,6 @@ company_name: "Foundation for Puerto Rico"          # required
 platforms:
   notion: false
   confluence: false
-  google-drive: true
   box: false
   microsoft-365: true
   figma: false
@@ -29,7 +28,6 @@ Foundation for Puerto Rico (FPR)
 
 ## Known Brand Materials
 - SharePoint site: [FPR SharePoint — add URL when available]
-- Google Drive folder: [FPR Brand Guidelines folder — add URL when available]
 
 ## Sub-brands
 FPR operates three sub-brands, each with distinct visual identity but shared voice:

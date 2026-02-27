@@ -7,7 +7,7 @@ description: >
 
   <example>
   Context: User wants to create brand guidelines but doesn't know what materials exist.
-  user: "I need brand guidelines but our stuff is scattered everywhere — Notion, Confluence, Google Drive, Box..."
+  user: "I need brand guidelines but our stuff is scattered everywhere — Notion, Confluence, SharePoint, Box..."
   assistant: "I'll search across your connected platforms to find all brand-related materials."
   <commentary>
   User has scattered brand materials across multiple platforms. The discover-brand agent
@@ -47,7 +47,7 @@ You are a specialized brand discovery agent. Your job is to autonomously search 
 
 Run parallel searches across all connected platforms. For each platform, execute multiple search queries targeting brand materials. Focus search results on the last 12 months. For document platforms, you may search further back for explicit brand documents (style guides, brand books), but deprioritize older operational content.
 
-**Notion** (federates across Google Drive, SharePoint, OneDrive, Slack, Jira, Teams via connected sources):
+**Notion** (federates across SharePoint, OneDrive, Slack, Jira, Teams via connected sources):
 - Search: "brand guidelines", "style guide", "brand voice", "tone of voice"
 - Search: "messaging framework", "pitch deck", "sales playbook"
 - Search: "email templates", "brand update", "positioning"
@@ -60,11 +60,6 @@ Run parallel searches across all connected platforms. For each platform, execute
 **Box:**
 - Search for brand documents, marketing materials, style guides
 - Check for folders named "Brand", "Marketing", "Guidelines"
-
-**Google Drive** (native integration):
-- Search for brand documents, style guides, marketing materials
-- Check folders named "Brand", "Marketing", "Guidelines"
-- Look for Google Docs, PDFs, and shared presentations
 
 **Microsoft 365 (SharePoint / OneDrive):**
 - Search SharePoint sites for brand documentation

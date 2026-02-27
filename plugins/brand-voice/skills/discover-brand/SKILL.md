@@ -2,7 +2,7 @@
 name: discover-brand
 description: >
   This skill orchestrates autonomous discovery of brand materials across enterprise
-  platforms (Notion, Confluence, Google Drive, Box, SharePoint, Figma, Gong, Granola, Slack).
+  platforms (Notion, Confluence, Box, SharePoint, Figma, Gong, Granola, Slack).
   It should be used when the user asks to "discover brand materials",
   "find brand documents", "search for brand guidelines", "audit brand content",
   "what brand materials do we have", "find our style guide", "where are our brand docs",
@@ -12,7 +12,7 @@ description: >
 
 # Brand Discovery
 
-Orchestrate autonomous discovery of brand materials across enterprise platforms. This skill coordinates the discover-brand agent to search connected platforms (Notion, Confluence, Google Drive, Box, Microsoft 365, Figma, Gong, Granola, Slack), triage sources, and produce a structured discovery report with open questions.
+Orchestrate autonomous discovery of brand materials across enterprise platforms. This skill coordinates the discover-brand agent to search connected platforms (Notion, Confluence, Box, Microsoft 365, Figma, Gong, Granola, Slack), triage sources, and produce a structured discovery report with open questions.
 
 ## Discovery Workflow
 
@@ -22,7 +22,7 @@ Before starting, briefly explain what's about to happen so the user knows what t
 
 "Here's how brand discovery works:
 
-1. **Search** — I'll search your connected platforms (Notion, Google Drive, Slack, etc.) for brand-related materials: style guides, pitch decks, templates, transcripts, and more.
+1. **Search** — I'll search your connected platforms (Notion, SharePoint, Slack, etc.) for brand-related materials: style guides, pitch decks, templates, transcripts, and more.
 2. **Analyze** — I'll categorize and rank what I find, pull the best sources, and produce a discovery report with what I found, any conflicts, and open questions.
 3. **Generate guidelines** — Once you've reviewed the report, I can generate a structured brand voice guideline document from the results.
 4. **Save** — Guidelines are saved to `.claude/brand-voice-guidelines.md` in your working folder once you approve them. Nothing is written until that step.
@@ -35,7 +35,7 @@ Wait for the user to confirm before proceeding. If they have questions about the
 
 Read `.claude/brand-voice.local.md` if it exists. Extract:
 - Company name
-- Which platforms are enabled (notion, confluence, google-drive, box, microsoft-365, figma, gong, granola, slack)
+- Which platforms are enabled (notion, confluence, box, microsoft-365, figma, gong, granola, slack)
 - Search depth preference (standard or deep)
 - Max sources limit
 - Any known brand material locations listed under "Known Brand Materials"
@@ -47,16 +47,16 @@ If no settings file exists, proceed with all connected platforms and standard se
 Before confirming scope, check which platforms are actually connected and classify them:
 
 **Document platforms** (where brand guidelines, style guides, templates, and decks live):
-- Notion, Confluence, Google Drive, Box, Microsoft 365 (SharePoint/OneDrive)
+- Notion, Confluence, Box, Microsoft 365 (SharePoint/OneDrive)
 
 **Supplementary platforms** (valuable for patterns, but not where brand docs are stored):
 - Slack, Gong, Granola, Figma
 
 Apply these rules:
 
-1. **If zero document platforms are connected**: **Stop.** Tell the user: "You don't have any document storage platforms connected (Google Drive, SharePoint, Notion, Confluence, or Box). Brand guidelines and style guides almost always live on one of these. Please connect at least one before running discovery. Gong/Granola/Slack transcripts are valuable supplements but unlikely to contain formal brand documents."
+1. **If zero document platforms are connected**: **Stop.** Tell the user: "You don't have any document storage platforms connected (SharePoint, Notion, Confluence, or Box). Brand guidelines and style guides almost always live on one of these. Please connect at least one before running discovery. Gong/Granola/Slack transcripts are valuable supplements but unlikely to contain formal brand documents."
 
-2. **If no Google Drive AND no Microsoft 365 AND no Box**: **Warn** (but proceed): "None of your primary file storage platforms (Google Drive, SharePoint, Box) are connected. Brand documents frequently live on these platforms. Discovery will proceed with [connected platforms], but results may have significant gaps. Consider connecting Google Drive or SharePoint."
+2. **If no Microsoft 365 AND no Box**: **Warn** (but proceed): "None of your primary file storage platforms (SharePoint, Box) are connected. Brand documents frequently live on these platforms. Discovery will proceed with [connected platforms], but results may have significant gaps. Consider connecting SharePoint."
 
 3. **If only one platform total is connected**: **Warn** (but proceed): "Only [platform] is connected. Discovery works best with 2+ platforms for cross-source validation. Results from a single platform will have lower confidence scores."
 

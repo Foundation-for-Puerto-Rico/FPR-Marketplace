@@ -17,7 +17,6 @@ Official, approved brand documentation. Highest trust level.
 **Examples:**
 - "Acme Corp Brand Guidelines v3.2.pdf"
 - "Official Style Guide" page in Confluence Marketing space
-- Brand book in Google Drive with company-wide sharing
 - Brand book in Box with company-wide sharing
 - Official Style Guide in SharePoint Marketing site
 
@@ -36,7 +35,7 @@ Brand applied in practice. Shows how guidelines manifest in real content.
 - "Cold Email Templates Q4 2024"
 - "Enterprise Sales Playbook"
 - "Customer Success Response Templates"
-- Pitch deck templates in Google Slides
+- Pitch deck templates in PowerPoint
 - Email templates in Outlook
 - Sales playbook on SharePoint
 

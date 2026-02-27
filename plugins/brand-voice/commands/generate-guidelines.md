@@ -10,7 +10,7 @@ Generate comprehensive, LLM-ready brand voice guidelines from whatever sources t
 Process the sources specified in $ARGUMENTS. If none specified, check:
 1. Whether a discovery report was generated in this session
 2. `.claude/brand-voice.local.md` for known brand material locations
-3. Connected platforms (Notion, Confluence, Google Drive, Box, SharePoint, Gong) for existing materials
+3. Connected platforms (Notion, Confluence, Box, SharePoint, Gong) for existing materials
 4. If nothing is available, suggest running `/brand-voice:discover-brand` first
 
 Follow the guideline-generation skill instructions to:

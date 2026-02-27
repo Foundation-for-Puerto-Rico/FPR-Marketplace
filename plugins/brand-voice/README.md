@@ -4,12 +4,12 @@ A [Tribe AI](https://tribe.ai) plugin for Claude Cowork. Built as a Cowork launc
 
 The brand knowledge that makes a company recognizable rarely lives anywhere useful. It's in a deck from 2022, a Confluence page no one's updated since the last rebrand, and the instincts of a few senior people who've been there long enough to just know. When sales reps are generating outreach with AI and new hires are producing content in their first week, that's exactly what gets lost.
 
-Brand Voice transforms scattered brand materials into enforceable AI guardrails. It searches across Confluence, Google Drive, Box, SharePoint, Slack, Gong, and Granola to discover how your company actually communicates — then creates LLM-ready brand guidelines and validates every piece of AI-generated content against them. Claude doesn't just write faster. It writes like you.
+Brand Voice transforms scattered brand materials into enforceable AI guardrails. It searches across Confluence, Box, SharePoint, Slack, Gong, and Granola to discover how your company actually communicates — then creates LLM-ready brand guidelines and validates every piece of AI-generated content against them. Claude doesn't just write faster. It writes like you.
 
 ## Features
 
 ### 1. Brand Discovery
-Your brand knowledge is buried across Notion, Confluence, Google Drive, Gong, Slack, and years of sales calls and meeting transcripts. Brand Voice searches across all of it — style guides, pitch decks, email templates, transcripts, design systems — to distill your strongest brand signals into a single, current source of truth. Grounded in how your best people actually communicate, not just how a style guide from three years ago says you should.
+Your brand knowledge is buried across Notion, Confluence, Gong, Slack, and years of sales calls and meeting transcripts. Brand Voice searches across all of it — style guides, pitch decks, email templates, transcripts, design systems — to distill your strongest brand signals into a single, current source of truth. Grounded in how your best people actually communicate, not just how a style guide from three years ago says you should.
 
 **Slash Command:** `/brand-voice:discover-brand`
 
@@ -45,7 +45,7 @@ When the plugin encounters ambiguity it can't resolve — conflicting documents,
 
 | Connector | URL | Purpose |
 |-----------|-----|---------|
-| **Notion** | `https://mcp.notion.com/mcp` | Discovery backbone — federates across connected Google Drive, SharePoint, OneDrive, Slack, Jira. Also stores output guidelines. |
+| **Notion** | `https://mcp.notion.com/mcp` | Discovery backbone — federates across connected SharePoint, OneDrive, Slack, Jira. Also stores output guidelines. |
 | **Atlassian** | `https://mcp.atlassian.com/v1/mcp` | Deep Confluence search + Jira context for Atlassian-heavy enterprises |
 | **Box** | `https://mcp.box.com` | Cloud file storage — official brand docs, shared decks, and style guides often live here |
 | **Microsoft 365** | `https://microsoft365.mcp.claude.com/mcp` | SharePoint, OneDrive, Outlook, Teams — enterprise document storage and email templates |
@@ -59,13 +59,12 @@ These platforms are native Claude integrations — no MCP connector install need
 
 | Integration | Purpose |
 |-------------|---------|
-| **Google Drive** | Shared brand documents, style guides, marketing materials, Google Docs and Slides |
 | **Slack** | Brand discussions, channel searches, pinned brand guidelines, informal voice patterns |
 
 ## Quick Start
 
 1. Install the plugin and open Claude Cowork
-2. Connect at least one platform (Notion recommended — it federates across Google Drive, SharePoint, Slack, and Jira)
+2. Connect at least one platform (Notion recommended — it federates across SharePoint, Slack, and Jira)
 3. Run `/brand-voice:discover-brand` — Claude searches your connected knowledge bases for brand materials automatically
 4. Run `/brand-voice:generate-guidelines` to produce a durable set of guidelines from the discovery report
 5. Use `/brand-voice:enforce-voice` when creating content — sales emails, proposals, LinkedIn posts, anything customer-facing
@@ -129,4 +128,4 @@ Copy `settings/brand-voice.local.md.example` to `.claude/brand-voice.local.md` i
 - Open questions are a feature, not a failure — every ambiguity includes a recommendation
 - Progressive disclosure — frontmatter is lean, SKILL.md is focused, detail lives in references/
 - Notion AI Search as federated discovery engine — one API searches 8+ platforms via connected sources
-- Google Drive and Slack are native Claude integrations — no MCP connector needed
+- Slack is a native Claude integration — no MCP connector needed
